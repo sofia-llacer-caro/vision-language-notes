@@ -1,0 +1,42 @@
+ 
+---
+title: "Stage 1: How Neural Networks Learn"
+date: today
+---
+
+## Reading
+
+Nielsen, *Neural Networks and Deep Learning*, chapters 1 and 2.
+[http://neuralnetworksanddeeplearning.com](http://neuralnetworksanddeeplearning.com)
+
+Estimated time: 4-6 hours.
+
+## Key concepts to watch for
+
+- Forward pass: what happens to an input as it moves through the network
+- Loss function: what the network is trying to minimize, and what that means geometrically
+- Gradient descent: walking downhill in a very high-dimensional landscape
+- Backpropagation: the chain rule, applied systematically
+
+## Checkpoint
+
+After finishing chapters 1 and 2, answer these in your own words:
+
+1. What is a neural network actually doing during a forward pass?
+2. What does "training" mean geometrically?
+3. Does backpropagation feel mysterious after reading Nielsen, or does it reduce 
+to something familiar?
+
+*(answers below)*
+
+## My answers
+
+*(to be filled after reading)*
+
+## Open questions
+
+*(things that didn't fully click)*
+
+## Notes
+
+*(anything worth writing down as you read)*

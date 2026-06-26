@@ -1,0 +1,60 @@
+ ---
+title: "Curriculum Overview"
+---
+
+A structured path through the technical foundations of vision-language models, 
+designed for someone coming from physics and applied mathematics.
+
+## Dependency structure
+
+Each stage builds on the previous. The through-line is this: all of these models 
+are learning to compress high-dimensional data into lower-dimensional representations. 
+What gets preserved and what gets discarded in that compression is the technical 
+core of most interesting questions in this space.
+
+## Stages
+
+### Stage 1 -- How neural networks learn
+**Core reading:** Nielsen, *Neural Networks and Deep Learning*, chapters 1-2.
+[Free online](http://neuralnetworksanddeeplearning.com)
+
+The foundation. Forward pass, loss functions, gradient descent, backpropagation. 
+From a physics perspective: optimization in a high-dimensional energy landscape.
+
+### Stage 2 -- Convolutional Neural Networks
+**Core reading:** CS231n notes on CNNs (Stanford, free online)
+
+Spatial locality and translation equivariance as inductive biases. 
+Convolution as learned feature detection. Residual connections.
+
+### Stage 3 -- Attention and Transformers
+**Core reading:** Vaswani et al. 2017 (*Attention is All You Need*) + 
+Jay Alammar's *The Illustrated Transformer*
+
+The architecture that replaced everything else. Self-attention as a soft, 
+differentiable, input-dependent weighted average. Vision Transformers (ViTs) 
+as the direct precursor to CLIP's image encoder.
+
+### Stage 4 -- CLIP and vision-language models
+**Core reading:** Radford et al. 2021 (*Learning Transferable Visual Models 
+From Natural Language Supervision*)
+
+Contrastive learning, shared embedding spaces, zero-shot classification. 
+Why the training data matters enormously.
+
+### Stage 5 -- Evaluation and benchmarks
+**Core reading:** Barocas, Hardt, Narayanan -- *Fairness and Machine Learning*, 
+selected chapters. [Free online](https://fairmlbook.org)
+
+What benchmarks actually measure. Subgroup performance. The incompatibility 
+of fairness metrics.
+
+## Status
+
+| Stage | Status |
+|---|---|
+| 1 -- Neural networks | in progress |
+| 2 -- CNNs | not started |
+| 3 -- Attention | not started |
+| 4 -- CLIP | not started |
+| 5 -- Evaluation | not started |

@@ -8,7 +8,10 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - about.qmd
+      - href: curriculum/00-overview.qmd
+        text: Curriculum
+      - href: notes/reading-log.qmd
+        text: Notes
 
 format:
   html:

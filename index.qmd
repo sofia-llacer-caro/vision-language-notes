@@ -1,0 +1,25 @@
+---
+title: "Vision-Language Notes"
+subtitle: "Technical notes on vision-language models and their foundations"
+---
+
+These are working notes from my PhD research on vision-language models. 
+My background is in physics and applied mathematics (complex systems), 
+and these notes document the technical foundations I am building as I go deeper into 
+computer vision, multimodal models, and representation learning.
+
+This is not a polished textbook. It is a living document -- updated as I read, 
+think, and get things wrong.
+
+## What this covers
+
+- Neural network fundamentals (with a physicist's framing)
+- Computer vision architectures: CNNs, ViTs, attention
+- Vision-language models, particularly CLIP
+- Mechanistic interpretability and activation steering
+- Evaluation, benchmarks, and what they actually measure
+
+## Background
+
+PhD candidate in computer vision and vision-language models.
+BSc Physics, MSc Modelling for Science and Engineering (complex systems track).

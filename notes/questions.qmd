@@ -1,0 +1,11 @@
+ 
+---
+title: "Open Questions"
+---
+
+Things I do not understand yet. Updated continuously.
+
+*The point of this page is to be honest about what is unclear, 
+not to perform competence.*
+
+---
