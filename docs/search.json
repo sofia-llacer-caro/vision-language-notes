@@ -1,0 +1,121 @@
+[
+  {
+    "objectID": "notes/reading-log.html",
+    "href": "notes/reading-log.html",
+    "title": "Reading Log",
+    "section": "",
+    "text": "A running log of things read, with brief impressions.\n\n\n\nDate\nTitle\nType\nNotes"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Vision-Language Notes",
+    "section": "",
+    "text": "These are working notes from my PhD research on vision-language models. My background is in physics and applied mathematics (complex systems), and these notes document the technical foundations I am building as I go deeper into computer vision, multimodal models, and representation learning.\nThis is not a polished textbook. It is a living document – updated as I read, think, and get things wrong."
+  },
+  {
+    "objectID": "index.html#what-this-covers",
+    "href": "index.html#what-this-covers",
+    "title": "Vision-Language Notes",
+    "section": "What this covers",
+    "text": "What this covers\n\nNeural network fundamentals (with a physicist’s framing)\nComputer vision architectures: CNNs, ViTs, attention\nVision-language models, particularly CLIP\nMechanistic interpretability and activation steering\nEvaluation, benchmarks, and what they actually measure"
+  },
+  {
+    "objectID": "index.html#background",
+    "href": "index.html#background",
+    "title": "Vision-Language Notes",
+    "section": "Background",
+    "text": "Background\nPhD candidate in computer vision and vision-language models. BSc Physics, MSc Modelling for Science and Engineering (complex systems track)."
+  },
+  {
+    "objectID": "curriculum/00-overview.html",
+    "href": "curriculum/00-overview.html",
+    "title": "Curriculum Overview",
+    "section": "",
+    "text": "A structured path through the technical foundations of vision-language models, designed for someone coming from physics and applied mathematics."
+  },
+  {
+    "objectID": "curriculum/00-overview.html#dependency-structure",
+    "href": "curriculum/00-overview.html#dependency-structure",
+    "title": "Curriculum Overview",
+    "section": "Dependency structure",
+    "text": "Dependency structure\nEach stage builds on the previous. The through-line is this: all of these models are learning to compress high-dimensional data into lower-dimensional representations. What gets preserved and what gets discarded in that compression is the technical core of most interesting questions in this space."
+  },
+  {
+    "objectID": "curriculum/00-overview.html#stages",
+    "href": "curriculum/00-overview.html#stages",
+    "title": "Curriculum Overview",
+    "section": "Stages",
+    "text": "Stages\n\nStage 1 – How neural networks learn\nCore reading: Nielsen, Neural Networks and Deep Learning, chapters 1-2. Free online\nThe foundation. Forward pass, loss functions, gradient descent, backpropagation. From a physics perspective: optimization in a high-dimensional energy landscape.\n\n\nStage 2 – Convolutional Neural Networks\nCore reading: CS231n notes on CNNs (Stanford, free online)\nSpatial locality and translation equivariance as inductive biases. Convolution as learned feature detection. Residual connections.\n\n\nStage 3 – Attention and Transformers\nCore reading: Vaswani et al. 2017 (Attention is All You Need) + Jay Alammar’s The Illustrated Transformer\nThe architecture that replaced everything else. Self-attention as a soft, differentiable, input-dependent weighted average. Vision Transformers (ViTs) as the direct precursor to CLIP’s image encoder.\n\n\nStage 4 – CLIP and vision-language models\nCore reading: Radford et al. 2021 (Learning Transferable Visual Models From Natural Language Supervision)\nContrastive learning, shared embedding spaces, zero-shot classification. Why the training data matters enormously.\n\n\nStage 5 – Evaluation and benchmarks\nCore reading: Barocas, Hardt, Narayanan – Fairness and Machine Learning, selected chapters. Free online\nWhat benchmarks actually measure. Subgroup performance. The incompatibility of fairness metrics."
+  },
+  {
+    "objectID": "curriculum/00-overview.html#status",
+    "href": "curriculum/00-overview.html#status",
+    "title": "Curriculum Overview",
+    "section": "Status",
+    "text": "Status\n\n\n\nStage\nStatus\n\n\n\n\n1 – Neural networks\nin progress\n\n\n2 – CNNs\nnot started\n\n\n3 – Attention\nnot started\n\n\n4 – CLIP\nnot started\n\n\n5 – Evaluation\nnot started"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site"
+  },
+  {
+    "objectID": "curriculum/01-neural-networks.html",
+    "href": "curriculum/01-neural-networks.html",
+    "title": "Stage 1: How Neural Networks Learn",
+    "section": "",
+    "text": "Nielsen, Neural Networks and Deep Learning, chapters 1 and 2. http://neuralnetworksanddeeplearning.com\nEstimated time: 4-6 hours."
+  },
+  {
+    "objectID": "curriculum/01-neural-networks.html#reading",
+    "href": "curriculum/01-neural-networks.html#reading",
+    "title": "Stage 1: How Neural Networks Learn",
+    "section": "",
+    "text": "Nielsen, Neural Networks and Deep Learning, chapters 1 and 2. http://neuralnetworksanddeeplearning.com\nEstimated time: 4-6 hours."
+  },
+  {
+    "objectID": "curriculum/01-neural-networks.html#key-concepts-to-watch-for",
+    "href": "curriculum/01-neural-networks.html#key-concepts-to-watch-for",
+    "title": "Stage 1: How Neural Networks Learn",
+    "section": "Key concepts to watch for",
+    "text": "Key concepts to watch for\n\nForward pass: what happens to an input as it moves through the network\nLoss function: what the network is trying to minimize, and what that means geometrically\nGradient descent: walking downhill in a very high-dimensional landscape\nBackpropagation: the chain rule, applied systematically"
+  },
+  {
+    "objectID": "curriculum/01-neural-networks.html#checkpoint",
+    "href": "curriculum/01-neural-networks.html#checkpoint",
+    "title": "Stage 1: How Neural Networks Learn",
+    "section": "Checkpoint",
+    "text": "Checkpoint\nAfter finishing chapters 1 and 2, answer these in your own words:\n\nWhat is a neural network actually doing during a forward pass?\nWhat does “training” mean geometrically?\nDoes backpropagation feel mysterious after reading Nielsen, or does it reduce to something familiar?\n\n(answers below)"
+  },
+  {
+    "objectID": "curriculum/01-neural-networks.html#my-answers",
+    "href": "curriculum/01-neural-networks.html#my-answers",
+    "title": "Stage 1: How Neural Networks Learn",
+    "section": "My answers",
+    "text": "My answers\n(to be filled after reading)"
+  },
+  {
+    "objectID": "curriculum/01-neural-networks.html#open-questions",
+    "href": "curriculum/01-neural-networks.html#open-questions",
+    "title": "Stage 1: How Neural Networks Learn",
+    "section": "Open questions",
+    "text": "Open questions\n(things that didn’t fully click)"
+  },
+  {
+    "objectID": "curriculum/01-neural-networks.html#notes",
+    "href": "curriculum/01-neural-networks.html#notes",
+    "title": "Stage 1: How Neural Networks Learn",
+    "section": "Notes",
+    "text": "Notes\n(anything worth writing down as you read)"
+  },
+  {
+    "objectID": "notes/questions.html",
+    "href": "notes/questions.html",
+    "title": "Open Questions",
+    "section": "",
+    "text": "Things I do not understand yet. Updated continuously.\nThe point of this page is to be honest about what is unclear, not to perform competence."
+  }
+]
