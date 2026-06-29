@@ -56,4 +56,16 @@ flowchart LR
 
 Where $x_i$ is the input. Let $w_i$ be the weight, where the binary output results in
 
-![Perceptron weights](C:\Users\ASUS\Desktop\Coding\vision-language-notes\media\perceptron-weights.png)
+![Perceptron weights](C:\Users\ASUS\Desktop\Coding\vision-language-notes\media\perceptron-weights.png).
+
+One can also write the relationship as a dot product with a bias term (equivalent to the y-intercept in a linear regression model), where the threshold information gets translated to a bias term instead.
+
+We might use particular arrangements of weights and biases to create a system which behaves like logical gate (e.g. NAND gate). However, changing the weights and biases will alter the logic behaviour between inputs and outputs, where, the weights be automaticallt adjusted, we could, theoretically, have the perceptron "learn".
+
+### Sigmoid neuron
+
+The perceptron carries an intrinsic problem for learning applications, since small changes can cause large changes in the output, making it difficult to learn. This is due to the step function binary nature of the perceptron. In order to solve this problem, one can define the sigmoid neuron, which is based in a sigmoid function instead of binary.
+
+### The architecture of neural networks
+
+
