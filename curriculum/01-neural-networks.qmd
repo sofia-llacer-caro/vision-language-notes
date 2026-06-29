@@ -1,7 +1,7 @@
  
 ---
 title: "Stage 1: How Neural Networks Learn"
-date: today
+date: 29/06/2026
 ---
 
 ## Reading
@@ -35,8 +35,25 @@ to something familiar?
 
 ## Open questions
 
-*(things that didn't fully click)*
+In a perceptron with many layers, what is the algebraic relationship between each of the layers? Are they adding non-linearities?
 
 ## Notes
 
-*(anything worth writing down as you read)*
+```{mermaid}
+%%| label: neuron-types
+%%| fig-cap: "Types of neurons discussed in the chapter"
+
+flowchart LR
+    D[Contents] --> A[Types of neurons]
+    D[Contents] --> E[Stochastic gradient descent, primary learning mechanism]
+    A[Types of neurons] --> B[Perceptron]
+    A[Types of neurons] --> C[Sigmoid neuron]
+```
+
+### Perceptron
+
+![Perceptron](C:\Users\ASUS\Desktop\Coding\vision-language-notes\media\perceptron.png)
+
+Where $x_i$ is the input. Let $w_i$ be the weight, where the binary output results in
+
+![Perceptron weights](C:\Users\ASUS\Desktop\Coding\vision-language-notes\media\perceptron-weights.png)
