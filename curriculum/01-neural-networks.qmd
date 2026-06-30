@@ -52,11 +52,11 @@ flowchart LR
 
 ### Perceptron
 
-![Perceptron](C:\Users\ASUS\Desktop\Coding\vision-language-notes\media\perceptron.png)
+![Perceptron](../media/perceptron.png)
 
 Where $x_i$ is the input. Let $w_i$ be the weight, where the binary output results in
 
-![Perceptron weights](C:\Users\ASUS\Desktop\Coding\vision-language-notes\media\perceptron-weights.png).
+![Perceptron weights](../media/perceptron-weights.png).
 
 One can also write the relationship as a dot product with a bias term (equivalent to the y-intercept in a linear regression model), where the threshold information gets translated to a bias term instead.
 
@@ -70,7 +70,7 @@ The perceptron carries an intrinsic problem for learning applications, since sma
 
 In general terms, there are three types of layers in a neural network: input layer, hidden layer(s), and output layer. The input layer receives the input data, the hidden layers perform computations and transformations on the data, and the output layer produces the final result.
 
-![Neural network architecture](C:\Users\ASUS\Desktop\Coding\vision-language-notes\media\architecture.png).
+![Neural network architecture](../media/architecture.png).
 
 Given these basic elements, one can construct architectures of neural networks with different arrangements of neurons. For instance, the one given immediately above is a feedforward neural network, meaning there are no loops present, and the information flows in one direction from input to output. There are, however, other arrangements which do include loops, called recurrent neural networks (RNNs).
 
