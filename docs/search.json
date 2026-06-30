@@ -4,7 +4,11 @@
     "href": "notes/reading-log.html",
     "title": "Reading Log",
     "section": "",
-    "text": "A running log of things read, with brief impressions.\n\n\n\nDate\nTitle\nType\nNotes"
+    "text": "A running log of things read, with brief impressions.\n\n\n\nDate\nTitle\nType\nNotes",
+    "crumbs": [
+      "Notes",
+      "Reading Log"
+    ]
   },
   {
     "objectID": "index.html",
@@ -32,28 +36,44 @@
     "href": "curriculum/00-overview.html",
     "title": "Curriculum Overview",
     "section": "",
-    "text": "A structured path through the technical foundations of vision-language models, designed for someone coming from physics and applied mathematics."
+    "text": "A structured path through the technical foundations of vision-language models, designed for someone coming from physics and applied mathematics.",
+    "crumbs": [
+      "Curriculum",
+      "Curriculum Overview"
+    ]
   },
   {
     "objectID": "curriculum/00-overview.html#dependency-structure",
     "href": "curriculum/00-overview.html#dependency-structure",
     "title": "Curriculum Overview",
     "section": "Dependency structure",
-    "text": "Dependency structure\nEach stage builds on the previous. The through-line is this: all of these models are learning to compress high-dimensional data into lower-dimensional representations. What gets preserved and what gets discarded in that compression is the technical core of most interesting questions in this space."
+    "text": "Dependency structure\nEach stage builds on the previous. The through-line is this: all of these models are learning to compress high-dimensional data into lower-dimensional representations. What gets preserved and what gets discarded in that compression is the technical core of most interesting questions in this space.",
+    "crumbs": [
+      "Curriculum",
+      "Curriculum Overview"
+    ]
   },
   {
     "objectID": "curriculum/00-overview.html#stages",
     "href": "curriculum/00-overview.html#stages",
     "title": "Curriculum Overview",
     "section": "Stages",
-    "text": "Stages\n\nStage 1 – How neural networks learn\nCore reading: Nielsen, Neural Networks and Deep Learning, chapters 1-2. Free online\nThe foundation. Forward pass, loss functions, gradient descent, backpropagation. From a physics perspective: optimization in a high-dimensional energy landscape.\n\n\nStage 2 – Convolutional Neural Networks\nCore reading: CS231n notes on CNNs (Stanford, free online)\nSpatial locality and translation equivariance as inductive biases. Convolution as learned feature detection. Residual connections.\n\n\nStage 3 – Attention and Transformers\nCore reading: Vaswani et al. 2017 (Attention is All You Need) + Jay Alammar’s The Illustrated Transformer\nThe architecture that replaced everything else. Self-attention as a soft, differentiable, input-dependent weighted average. Vision Transformers (ViTs) as the direct precursor to CLIP’s image encoder.\n\n\nStage 4 – CLIP and vision-language models\nCore reading: Radford et al. 2021 (Learning Transferable Visual Models From Natural Language Supervision)\nContrastive learning, shared embedding spaces, zero-shot classification. Why the training data matters enormously.\n\n\nStage 5 – Evaluation and benchmarks\nCore reading: Barocas, Hardt, Narayanan – Fairness and Machine Learning, selected chapters. Free online\nWhat benchmarks actually measure. Subgroup performance. The incompatibility of fairness metrics."
+    "text": "Stages\n\nStage 1 – How neural networks learn\nCore reading: Nielsen, Neural Networks and Deep Learning, chapters 1-2. Free online\nThe foundation. Forward pass, loss functions, gradient descent, backpropagation. From a physics perspective: optimization in a high-dimensional energy landscape.\n\n\nStage 2 – Convolutional Neural Networks\nCore reading: CS231n notes on CNNs (Stanford, free online)\nSpatial locality and translation equivariance as inductive biases. Convolution as learned feature detection. Residual connections.\n\n\nStage 3 – Attention and Transformers\nCore reading: Vaswani et al. 2017 (Attention is All You Need) + Jay Alammar’s The Illustrated Transformer\nThe architecture that replaced everything else. Self-attention as a soft, differentiable, input-dependent weighted average. Vision Transformers (ViTs) as the direct precursor to CLIP’s image encoder.\n\n\nStage 4 – CLIP and vision-language models\nCore reading: Radford et al. 2021 (Learning Transferable Visual Models From Natural Language Supervision)\nContrastive learning, shared embedding spaces, zero-shot classification. Why the training data matters enormously.\n\n\nStage 5 – Evaluation and benchmarks\nCore reading: Barocas, Hardt, Narayanan – Fairness and Machine Learning, selected chapters. Free online\nWhat benchmarks actually measure. Subgroup performance. The incompatibility of fairness metrics.",
+    "crumbs": [
+      "Curriculum",
+      "Curriculum Overview"
+    ]
   },
   {
     "objectID": "curriculum/00-overview.html#status",
     "href": "curriculum/00-overview.html#status",
     "title": "Curriculum Overview",
     "section": "Status",
-    "text": "Status\n\n\n\nStage\nStatus\n\n\n\n\n1 – Neural networks\nin progress\n\n\n2 – CNNs\nnot started\n\n\n3 – Attention\nnot started\n\n\n4 – CLIP\nnot started\n\n\n5 – Evaluation\nnot started"
+    "text": "Status\n\n\n\nStage\nStatus\n\n\n\n\n1 – Neural networks\nin progress\n\n\n2 – CNNs\nnot started\n\n\n3 – Attention\nnot started\n\n\n4 – CLIP\nnot started\n\n\n5 – Evaluation\nnot started",
+    "crumbs": [
+      "Curriculum",
+      "Curriculum Overview"
+    ]
   },
   {
     "objectID": "about.html",
@@ -67,55 +87,87 @@
     "href": "curriculum/01-neural-networks.html",
     "title": "Stage 1: How Neural Networks Learn",
     "section": "",
-    "text": "Nielsen, Neural Networks and Deep Learning, chapters 1 and 2. http://neuralnetworksanddeeplearning.com\nEstimated time: 4-6 hours."
+    "text": "Nielsen, Neural Networks and Deep Learning, chapters 1 and 2. http://neuralnetworksanddeeplearning.com\nEstimated time: 4-6 hours.",
+    "crumbs": [
+      "Curriculum",
+      "Stage 1: How Neural Networks Learn"
+    ]
   },
   {
     "objectID": "curriculum/01-neural-networks.html#reading",
     "href": "curriculum/01-neural-networks.html#reading",
     "title": "Stage 1: How Neural Networks Learn",
     "section": "",
-    "text": "Nielsen, Neural Networks and Deep Learning, chapters 1 and 2. http://neuralnetworksanddeeplearning.com\nEstimated time: 4-6 hours."
+    "text": "Nielsen, Neural Networks and Deep Learning, chapters 1 and 2. http://neuralnetworksanddeeplearning.com\nEstimated time: 4-6 hours.",
+    "crumbs": [
+      "Curriculum",
+      "Stage 1: How Neural Networks Learn"
+    ]
   },
   {
     "objectID": "curriculum/01-neural-networks.html#key-concepts-to-watch-for",
     "href": "curriculum/01-neural-networks.html#key-concepts-to-watch-for",
     "title": "Stage 1: How Neural Networks Learn",
     "section": "Key concepts to watch for",
-    "text": "Key concepts to watch for\n\nForward pass: what happens to an input as it moves through the network\nLoss function: what the network is trying to minimize, and what that means geometrically\nGradient descent: walking downhill in a very high-dimensional landscape\nBackpropagation: the chain rule, applied systematically"
+    "text": "Key concepts to watch for\n\nForward pass: what happens to an input as it moves through the network\nLoss function: what the network is trying to minimize, and what that means geometrically\nGradient descent: walking downhill in a very high-dimensional landscape\nBackpropagation: the chain rule, applied systematically",
+    "crumbs": [
+      "Curriculum",
+      "Stage 1: How Neural Networks Learn"
+    ]
   },
   {
     "objectID": "curriculum/01-neural-networks.html#checkpoint",
     "href": "curriculum/01-neural-networks.html#checkpoint",
     "title": "Stage 1: How Neural Networks Learn",
     "section": "Checkpoint",
-    "text": "Checkpoint\nAfter finishing chapters 1 and 2, answer these in your own words:\n\nWhat is a neural network actually doing during a forward pass?\nWhat does “training” mean geometrically?\nDoes backpropagation feel mysterious after reading Nielsen, or does it reduce to something familiar?\n\n(answers below)"
+    "text": "Checkpoint\nAfter finishing chapters 1 and 2, answer these in your own words:\n\nWhat is a neural network actually doing during a forward pass?\nWhat does “training” mean geometrically?\nDoes backpropagation feel mysterious after reading Nielsen, or does it reduce to something familiar?\n\n(answers below)",
+    "crumbs": [
+      "Curriculum",
+      "Stage 1: How Neural Networks Learn"
+    ]
   },
   {
     "objectID": "curriculum/01-neural-networks.html#my-answers",
     "href": "curriculum/01-neural-networks.html#my-answers",
     "title": "Stage 1: How Neural Networks Learn",
     "section": "My answers",
-    "text": "My answers\n(to be filled after reading)"
+    "text": "My answers\n(to be filled after reading)",
+    "crumbs": [
+      "Curriculum",
+      "Stage 1: How Neural Networks Learn"
+    ]
   },
   {
     "objectID": "curriculum/01-neural-networks.html#open-questions",
     "href": "curriculum/01-neural-networks.html#open-questions",
     "title": "Stage 1: How Neural Networks Learn",
     "section": "Open questions",
-    "text": "Open questions\n(things that didn’t fully click)"
+    "text": "Open questions\nIn a perceptron with many layers, what is the algebraic relationship between each of the layers? Are they adding non-linearities?",
+    "crumbs": [
+      "Curriculum",
+      "Stage 1: How Neural Networks Learn"
+    ]
   },
   {
     "objectID": "curriculum/01-neural-networks.html#notes",
     "href": "curriculum/01-neural-networks.html#notes",
     "title": "Stage 1: How Neural Networks Learn",
     "section": "Notes",
-    "text": "Notes\n(anything worth writing down as you read)"
+    "text": "Notes\n\n\n\n\nflowchart LR\n    D[Contents] --&gt; A[Types of neurons]\n    D[Contents] --&gt; E[Stochastic gradient descent, primary learning mechanism]\n    A[Types of neurons] --&gt; B[Perceptron]\n    A[Types of neurons] --&gt; C[Sigmoid neuron]\n\n\nTypes of neurons discussed in the chapter\n\n\n\n\nPerceptron\n\n\n\nPerceptron\n\n\nWhere \\(x_i\\) is the input. Let \\(w_i\\) be the weight, where the binary output results in\n.\nOne can also write the relationship as a dot product with a bias term (equivalent to the y-intercept in a linear regression model), where the threshold information gets translated to a bias term instead.\nWe might use particular arrangements of weights and biases to create a system which behaves like logical gate (e.g. NAND gate). However, changing the weights and biases will alter the logic behaviour between inputs and outputs, where, the weights be automaticallt adjusted, we could, theoretically, have the perceptron “learn”.\n\n\nSigmoid neuron\nThe perceptron carries an intrinsic problem for learning applications, since small changes can cause large changes in the output, making it difficult to learn. This is due to the step function binary nature of the perceptron. In order to solve this problem, one can define the sigmoid neuron, which is based in a sigmoid function instead of binary.\n\n\nThe architecture of neural networks\nIn general terms, there are three types of layers in a neural network: input layer, hidden layer(s), and output layer. The input layer receives the input data, the hidden layers perform computations and transformations on the data, and the output layer produces the final result.\n.\nGiven these basic elements, one can construct architectures of neural networks with different arrangements of neurons. For instance, the one given immediately above is a feedforward neural network, meaning there are no loops present, and the information flows in one direction from input to output. There are, however, other arrangements which do include loops, called recurrent neural networks (RNNs).\n\n\nA simple network to classify handwritten digits\nIn an image with a sequence of numbers, we could break this problem into two parts: first, identify the existance of different characters and; secondly, classify each of them as a cypher. We will focus on the latter, since the first problem becomes more evident after we have solved the first.\nTake each image of a digit to be 28x28 pixels, meaning a total of 784 pixels. This corresponds to the number of neurons in the input layer, for we are analysing the level of contrast of these, between black and white (between 1 and 0). Moving forward to the hidden layer, we can experiment with different number of neurons. In this example we will have 15 neurons in the hidden layer. Finally, the output layer has 10 neurons, corresponding to the digits from 0 to 9.\n\n\nLearning with gradient descent\n— I already know this, I’ll get to other things —",
+    "crumbs": [
+      "Curriculum",
+      "Stage 1: How Neural Networks Learn"
+    ]
   },
   {
     "objectID": "notes/questions.html",
     "href": "notes/questions.html",
     "title": "Open Questions",
     "section": "",
-    "text": "Things I do not understand yet. Updated continuously.\nThe point of this page is to be honest about what is unclear, not to perform competence."
+    "text": "Things I do not understand yet. Updated continuously.\nThe point of this page is to be honest about what is unclear, not to perform competence.",
+    "crumbs": [
+      "Notes",
+      "Open Questions"
+    ]
   }
 ]

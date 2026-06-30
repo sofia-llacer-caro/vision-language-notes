@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2026-06-26">
+<meta name="dcterms.date" content="2028-05-06">
 
 <title>Stage 1: How Neural Networks Learn – Vision-Language Notes</title>
 <style>
@@ -71,12 +71,44 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script src="../site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="../site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../styles.css">
 </head>
 
-<body class="nav-fixed quarto-light">
+<body class="nav-sidebar floating nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -98,7 +130,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../curriculum/00-overview.html"> 
+    <a class="nav-link active" href="../curriculum/00-overview.html" aria-current="page"> 
 <span class="menu-text">Curriculum</span></a>
   </li>  
   <li class="nav-item">
@@ -111,10 +143,39 @@ ul.task-list li input[type="checkbox"] {
 </div>
       </div> <!-- /container-fluid -->
     </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../curriculum/01-neural-networks.html">Stage 1: How Neural Networks Learn</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
 </header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../curriculum/00-overview.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Curriculum Overview</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../curriculum/01-neural-networks.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Stage 1: How Neural Networks Learn</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
@@ -126,7 +187,14 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#checkpoint" id="toc-checkpoint" class="nav-link" data-scroll-target="#checkpoint">Checkpoint</a></li>
   <li><a href="#my-answers" id="toc-my-answers" class="nav-link" data-scroll-target="#my-answers">My answers</a></li>
   <li><a href="#open-questions" id="toc-open-questions" class="nav-link" data-scroll-target="#open-questions">Open questions</a></li>
-  <li><a href="#notes" id="toc-notes" class="nav-link" data-scroll-target="#notes">Notes</a></li>
+  <li><a href="#notes" id="toc-notes" class="nav-link" data-scroll-target="#notes">Notes</a>
+  <ul class="collapse">
+  <li><a href="#perceptron" id="toc-perceptron" class="nav-link" data-scroll-target="#perceptron">Perceptron</a></li>
+  <li><a href="#sigmoid-neuron" id="toc-sigmoid-neuron" class="nav-link" data-scroll-target="#sigmoid-neuron">Sigmoid neuron</a></li>
+  <li><a href="#the-architecture-of-neural-networks" id="toc-the-architecture-of-neural-networks" class="nav-link" data-scroll-target="#the-architecture-of-neural-networks">The architecture of neural networks</a></li>
+  <li><a href="#a-simple-network-to-classify-handwritten-digits" id="toc-a-simple-network-to-classify-handwritten-digits" class="nav-link" data-scroll-target="#a-simple-network-to-classify-handwritten-digits">A simple network to classify handwritten digits</a></li>
+  <li><a href="#learning-with-gradient-descent" id="toc-learning-with-gradient-descent" class="nav-link" data-scroll-target="#learning-with-gradient-descent">Learning with gradient descent</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -146,7 +214,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">June 26, 2026</p>
+      <p class="date">May 6, 2028</p>
     </div>
   </div>
   
@@ -188,13 +256,59 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="open-questions" class="level2">
 <h2 class="anchored" data-anchor-id="open-questions">Open questions</h2>
-<p><em>(things that didn’t fully click)</em></p>
+<p>In a perceptron with many layers, what is the algebraic relationship between each of the layers? Are they adding non-linearities?</p>
 </section>
 <section id="notes" class="level2">
 <h2 class="anchored" data-anchor-id="notes">Notes</h2>
-<p><em>(anything worth writing down as you read)</em></p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div id="neuron-types">
+<div>
+<pre class="mermaid mermaid-js" data-label="neuron-types">flowchart LR
+    D[Contents] --&gt; A[Types of neurons]
+    D[Contents] --&gt; E[Stochastic gradient descent, primary learning mechanism]
+    A[Types of neurons] --&gt; B[Perceptron]
+    A[Types of neurons] --&gt; C[Sigmoid neuron]
+</pre>
+</div>
+<p>Types of neurons discussed in the chapter</p>
+</div>
+</div>
+</div>
+<section id="perceptron" class="level3">
+<h3 class="anchored" data-anchor-id="perceptron">Perceptron</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="C:\Users\ASUS\Desktop\Coding\vision-language-notes\media\perceptron.png" class="img-fluid figure-img"></p>
+<figcaption>Perceptron</figcaption>
+</figure>
+</div>
+<p>Where <span class="math inline">\(x_i\)</span> is the input. Let <span class="math inline">\(w_i\)</span> be the weight, where the binary output results in</p>
+<p><img src="C:\Users\ASUS\Desktop\Coding\vision-language-notes\media\perceptron-weights.png" class="img-fluid" alt="Perceptron weights">.</p>
+<p>One can also write the relationship as a dot product with a bias term (equivalent to the y-intercept in a linear regression model), where the threshold information gets translated to a bias term instead.</p>
+<p>We might use particular arrangements of weights and biases to create a system which behaves like logical gate (e.g.&nbsp;NAND gate). However, changing the weights and biases will alter the logic behaviour between inputs and outputs, where, the weights be automaticallt adjusted, we could, theoretically, have the perceptron “learn”.</p>
+</section>
+<section id="sigmoid-neuron" class="level3">
+<h3 class="anchored" data-anchor-id="sigmoid-neuron">Sigmoid neuron</h3>
+<p>The perceptron carries an intrinsic problem for learning applications, since small changes can cause large changes in the output, making it difficult to learn. This is due to the step function binary nature of the perceptron. In order to solve this problem, one can define the sigmoid neuron, which is based in a sigmoid function instead of binary.</p>
+</section>
+<section id="the-architecture-of-neural-networks" class="level3">
+<h3 class="anchored" data-anchor-id="the-architecture-of-neural-networks">The architecture of neural networks</h3>
+<p>In general terms, there are three types of layers in a neural network: input layer, hidden layer(s), and output layer. The input layer receives the input data, the hidden layers perform computations and transformations on the data, and the output layer produces the final result.</p>
+<p><img src="C:\Users\ASUS\Desktop\Coding\vision-language-notes\media\architecture.png" class="img-fluid" alt="Neural network architecture">.</p>
+<p>Given these basic elements, one can construct architectures of neural networks with different arrangements of neurons. For instance, the one given immediately above is a feedforward neural network, meaning there are no loops present, and the information flows in one direction from input to output. There are, however, other arrangements which do include loops, called recurrent neural networks (RNNs).</p>
+</section>
+<section id="a-simple-network-to-classify-handwritten-digits" class="level3">
+<h3 class="anchored" data-anchor-id="a-simple-network-to-classify-handwritten-digits">A simple network to classify handwritten digits</h3>
+<p>In an image with a sequence of numbers, we could break this problem into two parts: first, identify the existance of different characters and; secondly, classify each of them as a cypher. We will focus on the latter, since the first problem becomes more evident after we have solved the first.</p>
+<p>Take each image of a digit to be 28x28 pixels, meaning a total of 784 pixels. This corresponds to the number of neurons in the input layer, for we are analysing the level of contrast of these, between black and white (between 1 and 0). Moving forward to the hidden layer, we can experiment with different number of neurons. In this example we will have 15 neurons in the hidden layer. Finally, the output layer has 10 neurons, corresponding to the digits from 0 to 9.</p>
+</section>
+<section id="learning-with-gradient-descent" class="level3">
+<h3 class="anchored" data-anchor-id="learning-with-gradient-descent">Learning with gradient descent</h3>
+<p>— I already know this, I’ll get to other things —</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
