@@ -24,14 +24,19 @@ After finishing chapters 1 and 2, answer these in your own words:
 
 1. What is a neural network actually doing during a forward pass?
 2. What does "training" mean geometrically?
-3. Does backpropagation feel mysterious after reading Nielsen, or does it reduce 
-to something familiar?
+3. Does backpropagation feel mysterious after reading Nielsen, or does it reduce to something familiar?
 
 *(answers below)*
 
 ## My answers
 
-*(to be filled after reading)*
+1. A neural network is composed of individual processing units called neurons, organised in layers. Each neuron applies a linear transformation to its inputs (via weights and biases) followed by a nonlinearity such as a sigmoid. The nonlinearity is essential since, without it, stacking layers would collapse into a single linear transformation, losing all expressive power. Information flows forward through these layers, from input to output, where the final layer produces a prediction over some set of categories or values.
+
+2. Training means adjusting the weights of the network to minimize a cost function, which measures the distance between the network's predictions and the correct answers in the training set. Geometrically, this is optimization in weight space: a space with as many dimensions as there are parameters in the network. Gradient descent walks downhill in this space by computing the gradient of the cost function with respect to all weights and taking a small step in the opposite direction. Backpropagation is what makes this efficient: it applies the chain rule recursively, propagating the error signal backward through the network and reusing intermediate gradients at each layer rather than recomputing them from scratch.
+
+3. Not really, it reduces to the chain rule from calculus, applied recursively across the computational graph of the network.
+
+
 
 ## Open questions
 
@@ -79,7 +84,3 @@ Given these basic elements, one can construct architectures of neural networks w
 In an image with a sequence of numbers, we could break this problem into two parts: first, identify the existance of different characters and; secondly, classify each of them as a cypher. We will focus on the latter, since the first problem becomes more evident after we have solved the first.
 
 Take each image of a digit to be 28x28 pixels, meaning a total of 784 pixels. This corresponds to the number of neurons in the input layer, for we are analysing the level of contrast of these, between black and white (between 1 and 0). Moving forward to the hidden layer, we can experiment with different number of neurons. In this example we will have 15 neurons in the hidden layer. Finally, the output layer has 10 neurons, corresponding to the digits from 0 to 9.
-
-### Learning with gradient descent
-
---- I already know this, I'll get to other things ---

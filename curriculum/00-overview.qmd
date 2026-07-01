@@ -19,7 +19,6 @@ core of most interesting questions in this space.
 [Free online](http://neuralnetworksanddeeplearning.com)
 
 The foundation. Forward pass, loss functions, gradient descent, backpropagation. 
-From a physics perspective: optimization in a high-dimensional energy landscape.
 
 ### Stage 2 -- Convolutional Neural Networks
 **Core reading:** CS231n notes on CNNs (Stanford, free online)
@@ -53,8 +52,8 @@ of fairness metrics.
 
 | Stage | Status |
 |---|---|
-| 1 -- Neural networks | in progress |
-| 2 -- CNNs | not started |
+| 1 -- Neural networks | finished |
+| 2 -- CNNs | in progress |
 | 3 -- Attention | not started |
 | 4 -- CLIP | not started |
 | 5 -- Evaluation | not started |

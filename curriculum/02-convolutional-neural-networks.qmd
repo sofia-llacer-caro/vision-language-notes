@@ -1,0 +1,38 @@
+---
+title: "Stage 2: Convolutional Neural Networks"
+date: today
+---
+
+## Reading
+
+CS231n, *Convolutional Neural Networks for Visual Recognition*, module on CNNs.
+[https://cs231n.github.io/convolutional-networks](https://cs231n.github.io/convolutional-networks)
+
+Estimated time: 2-3 hours.
+
+## Key concepts to watch for
+
+- Convolution: what it actually does to an image mathematically
+- Inductive biases: spatial locality and translation equivariance, and why they matter
+- Feature maps: what gets detected at each layer, and how abstraction builds up
+- Pooling: coarse-graining the representation
+- Residual connections: why depth was hard before ResNets, and what skip connections solve
+
+## Checkpoint
+
+After finishing the reading, answer these in your own words:
+
+1. What is a convolution doing to an image? What is the filter learning?
+2. What does "translation equivariance" mean, and why is it a useful assumption for images?
+3. As you go deeper in a CNN, what happens to the representation? What is gained and what is lost?
+4. What problem do residual connections solve, and why does that matter for deep networks?
+
+*(answers below)*
+
+## My answers
+
+*(to be filled after reading)*
+
+## Open questions
+
+## Notes
