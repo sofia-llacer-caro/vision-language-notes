@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2028-05-06">
+<meta name="dcterms.date" content="2026-07-03">
 
-<title>Stage 1: How Neural Networks Learn – Vision-Language Notes</title>
+<title>Stage 2: Convolutional Neural Networks – Vision-Language Notes</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -71,9 +71,6 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script src="../site_libs/quarto-diagram/mermaid.min.js"></script>
-<script src="../site_libs/quarto-diagram/mermaid-init.js"></script>
-<link href="../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
@@ -108,7 +105,7 @@ window.Quarto = {
 <link rel="stylesheet" href="../styles.css">
 </head>
 
-<body class="nav-sidebar floating nav-fixed quarto-light">
+<body class="nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -130,7 +127,7 @@ window.Quarto = {
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../curriculum/00-overview.html" aria-current="page"> 
+    <a class="nav-link" href="../curriculum/00-overview.html"> 
 <span class="menu-text">Curriculum</span></a>
   </li>  
   <li class="nav-item">
@@ -143,39 +140,10 @@ window.Quarto = {
 </div>
       </div> <!-- /container-fluid -->
     </nav>
-  <nav class="quarto-secondary-nav">
-    <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-        <i class="bi bi-layout-text-sidebar-reverse"></i>
-      </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../curriculum/01-neural-networks.html">Stage 1: How Neural Networks Learn</a></li></ol></nav>
-        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-        </a>
-    </div>
-  </nav>
 </header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
-    <div class="sidebar-menu-container"> 
-    <ul class="list-unstyled mt-1">
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../curriculum/00-overview.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Curriculum Overview</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../curriculum/01-neural-networks.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Stage 1: How Neural Networks Learn</span></a>
-  </div>
-</li>
-    </ul>
-    </div>
-</nav>
-<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
@@ -187,13 +155,7 @@ window.Quarto = {
   <li><a href="#checkpoint" id="toc-checkpoint" class="nav-link" data-scroll-target="#checkpoint">Checkpoint</a></li>
   <li><a href="#my-answers" id="toc-my-answers" class="nav-link" data-scroll-target="#my-answers">My answers</a></li>
   <li><a href="#open-questions" id="toc-open-questions" class="nav-link" data-scroll-target="#open-questions">Open questions</a></li>
-  <li><a href="#notes" id="toc-notes" class="nav-link" data-scroll-target="#notes">Notes</a>
-  <ul class="collapse">
-  <li><a href="#perceptron" id="toc-perceptron" class="nav-link" data-scroll-target="#perceptron">Perceptron</a></li>
-  <li><a href="#sigmoid-neuron" id="toc-sigmoid-neuron" class="nav-link" data-scroll-target="#sigmoid-neuron">Sigmoid neuron</a></li>
-  <li><a href="#the-architecture-of-neural-networks" id="toc-the-architecture-of-neural-networks" class="nav-link" data-scroll-target="#the-architecture-of-neural-networks">The architecture of neural networks</a></li>
-  <li><a href="#a-simple-network-to-classify-handwritten-digits" id="toc-a-simple-network-to-classify-handwritten-digits" class="nav-link" data-scroll-target="#a-simple-network-to-classify-handwritten-digits">A simple network to classify handwritten digits</a></li>
-  </ul></li>
+  <li><a href="#notes" id="toc-notes" class="nav-link" data-scroll-target="#notes">Notes</a></li>
   </ul>
 </nav>
     </div>
@@ -202,7 +164,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Stage 1: How Neural Networks Learn</h1>
+<h1 class="title">Stage 2: Convolutional Neural Networks</h1>
 </div>
 
 
@@ -213,7 +175,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">May 6, 2028</p>
+      <p class="date">July 3, 2026</p>
     </div>
   </div>
   
@@ -227,87 +189,53 @@ window.Quarto = {
 
 <section id="reading" class="level2">
 <h2 class="anchored" data-anchor-id="reading">Reading</h2>
-<p>Nielsen, <em>Neural Networks and Deep Learning</em>, chapters 1 and 2. <a href="http://neuralnetworksanddeeplearning.com">http://neuralnetworksanddeeplearning.com</a></p>
-<p>Estimated time: 4-6 hours.</p>
+<p>CS231n, <em>Convolutional Neural Networks for Visual Recognition</em>, module on CNNs. <a href="https://cs231n.github.io/convolutional-networks">https://cs231n.github.io/convolutional-networks</a></p>
+<p>Estimated time: 2-3 hours.</p>
 </section>
 <section id="key-concepts-to-watch-for" class="level2">
 <h2 class="anchored" data-anchor-id="key-concepts-to-watch-for">Key concepts to watch for</h2>
 <ul>
-<li>Forward pass: what happens to an input as it moves through the network</li>
-<li>Loss function: what the network is trying to minimize, and what that means geometrically</li>
-<li>Gradient descent: walking downhill in a very high-dimensional landscape</li>
-<li>Backpropagation: the chain rule, applied systematically</li>
+<li>Convolution: what it actually does to an image mathematically</li>
+<li>Inductive biases: spatial locality and translation equivariance, and why they matter</li>
+<li>Feature maps: what gets detected at each layer, and how abstraction builds up</li>
+<li>Pooling: coarse-graining the representation</li>
+<li>Residual connections: why depth was hard before ResNets, and what skip connections solve</li>
 </ul>
 </section>
 <section id="checkpoint" class="level2">
 <h2 class="anchored" data-anchor-id="checkpoint">Checkpoint</h2>
-<p>After finishing chapters 1 and 2, answer these in your own words:</p>
+<p>After finishing the reading, answer these in your own words:</p>
 <ol type="1">
-<li>What is a neural network actually doing during a forward pass?</li>
-<li>What does “training” mean geometrically?</li>
-<li>Does backpropagation feel mysterious after reading Nielsen, or does it reduce to something familiar?</li>
+<li>What is a convolution doing to an image? What is the filter learning?</li>
+<li>What does “translation equivariance” mean, and why is it a useful assumption for images?</li>
+<li>As you go deeper in a CNN, what happens to the representation? What is gained and what is lost?</li>
+<li>What problem do residual connections solve, and why does that matter for deep networks?</li>
 </ol>
 <p><em>(answers below)</em></p>
 </section>
 <section id="my-answers" class="level2">
 <h2 class="anchored" data-anchor-id="my-answers">My answers</h2>
-<ol type="1">
-<li><p>A neural network is composed of individual processing units called neurons, organised in layers. Each neuron applies a linear transformation to its inputs (via weights and biases) followed by a nonlinearity such as a sigmoid. The nonlinearity is essential since, without it, stacking layers would collapse into a single linear transformation, losing all expressive power. Information flows forward through these layers, from input to output, where the final layer produces a prediction over some set of categories or values.</p></li>
-<li><p>Training means adjusting the weights of the network to minimize a cost function, which measures the distance between the network’s predictions and the correct answers in the training set. Geometrically, this is optimization in weight space: a space with as many dimensions as there are parameters in the network. Gradient descent walks downhill in this space by computing the gradient of the cost function with respect to all weights and taking a small step in the opposite direction. Backpropagation is what makes this efficient: it applies the chain rule recursively, propagating the error signal backward through the network and reusing intermediate gradients at each layer rather than recomputing them from scratch.</p></li>
-<li><p>Not really, it reduces to the chain rule from calculus, applied recursively across the computational graph of the network.</p></li>
-</ol>
+<p><em>(to be filled after reading)</em></p>
 </section>
 <section id="open-questions" class="level2">
 <h2 class="anchored" data-anchor-id="open-questions">Open questions</h2>
-<p>In a perceptron with many layers, what is the algebraic relationship between each of the layers? Are they adding non-linearities?</p>
+<ul>
+<li><strong>“3D volumes of neurons” –&gt; what does this mean? 3D is already volume if we’re talking space coordinates. What dimensions are we talking about exaclty? What space are they living in?</strong>; Apparently by 3D they mean a tensor in 3 dimensions. For an input image the three dimensions could for instance be the width and height of an image, and the “depth” or third dimension could be the color channels (3 for RGB). So a 32x32 color image is a 32x32x3 array of numbers.</li>
+</ul>
 </section>
 <section id="notes" class="level2">
 <h2 class="anchored" data-anchor-id="notes">Notes</h2>
-<div class="cell" data-layout-align="default">
-<div class="cell-output-display">
-<div id="neuron-types">
-<div>
-<pre class="mermaid mermaid-js" data-label="neuron-types">flowchart LR
-    D[Contents] --&gt; A[Types of neurons]
-    D[Contents] --&gt; E[Stochastic gradient descent, primary learning mechanism]
-    A[Types of neurons] --&gt; B[Perceptron]
-    A[Types of neurons] --&gt; C[Sigmoid neuron]
-</pre>
-</div>
-<p>Types of neurons discussed in the chapter</p>
-</div>
-</div>
-</div>
-<section id="perceptron" class="level3">
-<h3 class="anchored" data-anchor-id="perceptron">Perceptron</h3>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="../media/perceptron.png" class="img-fluid figure-img"></p>
-<figcaption>Perceptron</figcaption>
-</figure>
-</div>
-<p>Where <span class="math inline">\(x_i\)</span> is the input. Let <span class="math inline">\(w_i\)</span> be the weight, where the binary output results in</p>
-<p><img src="../media/perceptron-weights.png" class="img-fluid" alt="Perceptron weights">.</p>
-<p>One can also write the relationship as a dot product with a bias term (equivalent to the y-intercept in a linear regression model), where the threshold information gets translated to a bias term instead.</p>
-<p>We might use particular arrangements of weights and biases to create a system which behaves like logical gate (e.g.&nbsp;NAND gate). However, changing the weights and biases will alter the logic behaviour between inputs and outputs, where, the weights be automaticallt adjusted, we could, theoretically, have the perceptron “learn”.</p>
-</section>
-<section id="sigmoid-neuron" class="level3">
-<h3 class="anchored" data-anchor-id="sigmoid-neuron">Sigmoid neuron</h3>
-<p>The perceptron carries an intrinsic problem for learning applications, since small changes can cause large changes in the output, making it difficult to learn. This is due to the step function binary nature of the perceptron. In order to solve this problem, one can define the sigmoid neuron, which is based in a sigmoid function instead of binary.</p>
-</section>
-<section id="the-architecture-of-neural-networks" class="level3">
-<h3 class="anchored" data-anchor-id="the-architecture-of-neural-networks">The architecture of neural networks</h3>
-<p>In general terms, there are three types of layers in a neural network: input layer, hidden layer(s), and output layer. The input layer receives the input data, the hidden layers perform computations and transformations on the data, and the output layer produces the final result.</p>
-<p><img src="../media/architecture.png" class="img-fluid" alt="Neural network architecture">.</p>
-<p>Given these basic elements, one can construct architectures of neural networks with different arrangements of neurons. For instance, the one given immediately above is a feedforward neural network, meaning there are no loops present, and the information flows in one direction from input to output. There are, however, other arrangements which do include loops, called recurrent neural networks (RNNs).</p>
-</section>
-<section id="a-simple-network-to-classify-handwritten-digits" class="level3">
-<h3 class="anchored" data-anchor-id="a-simple-network-to-classify-handwritten-digits">A simple network to classify handwritten digits</h3>
-<p>In an image with a sequence of numbers, we could break this problem into two parts: first, identify the existance of different characters and; secondly, classify each of them as a cypher. We will focus on the latter, since the first problem becomes more evident after we have solved the first.</p>
-<p>Take each image of a digit to be 28x28 pixels, meaning a total of 784 pixels. This corresponds to the number of neurons in the input layer, for we are analysing the level of contrast of these, between black and white (between 1 and 0). Moving forward to the hidden layer, we can experiment with different number of neurons. In this example we will have 15 neurons in the hidden layer. Finally, the output layer has 10 neurons, corresponding to the digits from 0 to 9.</p>
+<p>CNNs have the same key components of the neural networks we saw before but, in this case, their loss function can be for instance an SVM or softmax and, most importantly, they assume all inputs are images. In particular, regular neural networks do not scale well to images, which is why we can have this subset of neural networks as a specialised subtype particular to the problematics commonly found in images.</p>
+<p>CNNs have three types of layers: Convolutional Layer, Pooling Layer and Fully-Connected Layer (add ReLU as an elementwise transformation). Stacking these results in the full architecture of a CNN. As the image moves through the network, width and height shrink while depth grows, encoding increasingly abstract features. The four main layer types are:</p>
+<ul>
+<li><p><strong>CONV (Convolutional Layer).</strong> The core of the network. A set of small learned filters slides across the spatial dimensions of the input. At each position, it computes a dot product between the filter weights and the local patch of the image. Since weights can be any real number (positive or negative), the output can also be negative or positive. Each filter produces one 2D activation map, and stacking all of them gives the new depth dimension. Early filters learn to detect edges and textures; deeper filters detect increasingly abstract patterns.</p></li>
+<li><p><strong>ReLU (Rectified Linear Unit).</strong> Applied elementwise immediately after convolution. The function is simply <span class="math inline">\(f(x) = \max(0, x)\)</span>: positive values pass through unchanged, negative values are set to zero. A negative activation means the filter did not detect its feature at that location, so ReLU converts it to “nothing detected.” Without this nonlinearity, stacking layers would collapse into a single linear transformation and the network would lose expressive power.</p></li>
+<li><p><strong>POOL (Pooling Layer).</strong> Downsamples the spatial dimensions. The most common version is max pooling: a 2x2 window slides across each activation map and keeps only the maximum value in each patch, discarding the rest. This halves the width and height while preserving depth. The intuition is coarse-graining: integrating out fine-grained spatial detail to keep only the dominant signal, reducing computation and making the representation more compact.</p></li>
+</ul>
+<p><strong>FC (Fully-Connected Layer).</strong> At the end of the network, once the spatial dimensions have been reduced to a small size, the volume is flattened and passed through one or more fully-connected layers, exactly as in a standard neural network. The final FC layer outputs one score per class, and the class with the highest score is the prediction.</p>
+<p>The full pipeline for a simple CNN is therefore: detect local features (CONV), introduce nonlinearity (ReLU), reduce spatial resolution (POOL), repeat until compact, then classify (FC).</p>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
