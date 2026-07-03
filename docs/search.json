@@ -1,16 +1,5 @@
 [
   {
-    "objectID": "notes/reading-log.html",
-    "href": "notes/reading-log.html",
-    "title": "Reading Log",
-    "section": "",
-    "text": "A running log of things read, with brief impressions.\n\n\n\nDate\nTitle\nType\nNotes",
-    "crumbs": [
-      "Notes",
-      "Reading Log"
-    ]
-  },
-  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Vision-Language Notes",
@@ -18,11 +7,11 @@
     "text": "These are working notes from my PhD research on vision-language models. My background is in physics and applied mathematics (complex systems), and these notes document the technical foundations I am building as I go deeper into computer vision, multimodal models, and representation learning.\nThis is not a polished textbook. It is a living document – updated as I read, think, and get things wrong."
   },
   {
-    "objectID": "index.html#what-this-covers",
-    "href": "index.html#what-this-covers",
+    "objectID": "index.html#chapters",
+    "href": "index.html#chapters",
     "title": "Vision-Language Notes",
-    "section": "What this covers",
-    "text": "What this covers\n\nNeural network fundamentals (with a physicist’s framing)\nComputer vision architectures: CNNs, ViTs, attention\nVision-language models, particularly CLIP\nMechanistic interpretability and activation steering\nEvaluation, benchmarks, and what they actually measure"
+    "section": "Chapters",
+    "text": "Chapters\n\nStage 0 – Curriculum overview\nStage 1 – How neural networks learn\nStage 2 – Convolutional neural networks"
   },
   {
     "objectID": "index.html#background",
@@ -109,13 +98,6 @@
     ]
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "About this site"
-  },
-  {
     "objectID": "curriculum/00-overview.html",
     "href": "curriculum/00-overview.html",
     "title": "Curriculum Overview",
@@ -164,59 +146,76 @@
     "href": "curriculum/02-convolutional-neural-networks.html",
     "title": "Stage 2: Convolutional Neural Networks",
     "section": "",
-    "text": "CS231n, Convolutional Neural Networks for Visual Recognition, module on CNNs. https://cs231n.github.io/convolutional-networks\nEstimated time: 2-3 hours."
+    "text": "CS231n, Convolutional Neural Networks for Visual Recognition, module on CNNs. https://cs231n.github.io/convolutional-networks\nEstimated time: 2-3 hours.",
+    "crumbs": [
+      "Curriculum",
+      "Stage 2: Convolutional Neural Networks"
+    ]
   },
   {
     "objectID": "curriculum/02-convolutional-neural-networks.html#reading",
     "href": "curriculum/02-convolutional-neural-networks.html#reading",
     "title": "Stage 2: Convolutional Neural Networks",
     "section": "",
-    "text": "CS231n, Convolutional Neural Networks for Visual Recognition, module on CNNs. https://cs231n.github.io/convolutional-networks\nEstimated time: 2-3 hours."
+    "text": "CS231n, Convolutional Neural Networks for Visual Recognition, module on CNNs. https://cs231n.github.io/convolutional-networks\nEstimated time: 2-3 hours.",
+    "crumbs": [
+      "Curriculum",
+      "Stage 2: Convolutional Neural Networks"
+    ]
   },
   {
     "objectID": "curriculum/02-convolutional-neural-networks.html#key-concepts-to-watch-for",
     "href": "curriculum/02-convolutional-neural-networks.html#key-concepts-to-watch-for",
     "title": "Stage 2: Convolutional Neural Networks",
     "section": "Key concepts to watch for",
-    "text": "Key concepts to watch for\n\nConvolution: what it actually does to an image mathematically\nInductive biases: spatial locality and translation equivariance, and why they matter\nFeature maps: what gets detected at each layer, and how abstraction builds up\nPooling: coarse-graining the representation\nResidual connections: why depth was hard before ResNets, and what skip connections solve"
+    "text": "Key concepts to watch for\n\nConvolution: what it actually does to an image mathematically\nInductive biases: spatial locality and translation equivariance, and why they matter\nFeature maps: what gets detected at each layer, and how abstraction builds up\nPooling: coarse-graining the representation\nResidual connections: why depth was hard before ResNets, and what skip connections solve",
+    "crumbs": [
+      "Curriculum",
+      "Stage 2: Convolutional Neural Networks"
+    ]
   },
   {
     "objectID": "curriculum/02-convolutional-neural-networks.html#checkpoint",
     "href": "curriculum/02-convolutional-neural-networks.html#checkpoint",
     "title": "Stage 2: Convolutional Neural Networks",
     "section": "Checkpoint",
-    "text": "Checkpoint\nAfter finishing the reading, answer these in your own words:\n\nWhat is a convolution doing to an image? What is the filter learning?\nWhat does “translation equivariance” mean, and why is it a useful assumption for images?\nAs you go deeper in a CNN, what happens to the representation? What is gained and what is lost?\nWhat problem do residual connections solve, and why does that matter for deep networks?\n\n(answers below)"
+    "text": "Checkpoint\nAfter finishing the reading, answer these in your own words:\n\nWhat is a convolution doing to an image? What is the filter learning?\nWhat does “translation equivariance” mean, and why is it a useful assumption for images?\nAs you go deeper in a CNN, what happens to the representation? What is gained and what is lost?\nWhat problem do residual connections solve, and why does that matter for deep networks?\n\n(answers below)",
+    "crumbs": [
+      "Curriculum",
+      "Stage 2: Convolutional Neural Networks"
+    ]
   },
   {
     "objectID": "curriculum/02-convolutional-neural-networks.html#my-answers",
     "href": "curriculum/02-convolutional-neural-networks.html#my-answers",
     "title": "Stage 2: Convolutional Neural Networks",
     "section": "My answers",
-    "text": "My answers\n(to be filled after reading)"
+    "text": "My answers\n(to be filled after reading)",
+    "crumbs": [
+      "Curriculum",
+      "Stage 2: Convolutional Neural Networks"
+    ]
   },
   {
     "objectID": "curriculum/02-convolutional-neural-networks.html#open-questions",
     "href": "curriculum/02-convolutional-neural-networks.html#open-questions",
     "title": "Stage 2: Convolutional Neural Networks",
     "section": "Open questions",
-    "text": "Open questions\n\n“3D volumes of neurons” –&gt; what does this mean? 3D is already volume if we’re talking space coordinates. What dimensions are we talking about exaclty? What space are they living in?; Apparently by 3D they mean a tensor in 3 dimensions. For an input image the three dimensions could for instance be the width and height of an image, and the “depth” or third dimension could be the color channels (3 for RGB). So a 32x32 color image is a 32x32x3 array of numbers."
+    "text": "Open questions\n\n“3D volumes of neurons” –&gt; what does this mean? 3D is already volume if we’re talking space coordinates. What dimensions are we talking about exaclty? What space are they living in?; Apparently by 3D they mean a tensor in 3 dimensions. For an input image the three dimensions could for instance be the width and height of an image, and the “depth” or third dimension could be the color channels (3 for RGB). So a 32x32 color image is a 32x32x3 array of numbers.",
+    "crumbs": [
+      "Curriculum",
+      "Stage 2: Convolutional Neural Networks"
+    ]
   },
   {
     "objectID": "curriculum/02-convolutional-neural-networks.html#notes",
     "href": "curriculum/02-convolutional-neural-networks.html#notes",
     "title": "Stage 2: Convolutional Neural Networks",
     "section": "Notes",
-    "text": "Notes\nCNNs have the same key components of the neural networks we saw before but, in this case, their loss function can be for instance an SVM or softmax and, most importantly, they assume all inputs are images. In particular, regular neural networks do not scale well to images, which is why we can have this subset of neural networks as a specialised subtype particular to the problematics commonly found in images.\nCNNs have three types of layers: Convolutional Layer, Pooling Layer and Fully-Connected Layer (add ReLU as an elementwise transformation). Stacking these results in the full architecture of a CNN. As the image moves through the network, width and height shrink while depth grows, encoding increasingly abstract features. The four main layer types are:\n\nCONV (Convolutional Layer). The core of the network. A set of small learned filters slides across the spatial dimensions of the input. At each position, it computes a dot product between the filter weights and the local patch of the image. Since weights can be any real number (positive or negative), the output can also be negative or positive. Each filter produces one 2D activation map, and stacking all of them gives the new depth dimension. Early filters learn to detect edges and textures; deeper filters detect increasingly abstract patterns.\nReLU (Rectified Linear Unit). Applied elementwise immediately after convolution. The function is simply \\(f(x) = \\max(0, x)\\): positive values pass through unchanged, negative values are set to zero. A negative activation means the filter did not detect its feature at that location, so ReLU converts it to “nothing detected.” Without this nonlinearity, stacking layers would collapse into a single linear transformation and the network would lose expressive power.\nPOOL (Pooling Layer). Downsamples the spatial dimensions. The most common version is max pooling: a 2x2 window slides across each activation map and keeps only the maximum value in each patch, discarding the rest. This halves the width and height while preserving depth. The intuition is coarse-graining: integrating out fine-grained spatial detail to keep only the dominant signal, reducing computation and making the representation more compact.\n\nFC (Fully-Connected Layer). At the end of the network, once the spatial dimensions have been reduced to a small size, the volume is flattened and passed through one or more fully-connected layers, exactly as in a standard neural network. The final FC layer outputs one score per class, and the class with the highest score is the prediction.\nThe full pipeline for a simple CNN is therefore: detect local features (CONV), introduce nonlinearity (ReLU), reduce spatial resolution (POOL), repeat until compact, then classify (FC)."
-  },
-  {
-    "objectID": "notes/questions.html",
-    "href": "notes/questions.html",
-    "title": "Open Questions",
-    "section": "",
-    "text": "Things I do not understand yet. Updated continuously.\nThe point of this page is to be honest about what is unclear, not to perform competence.",
+    "text": "Notes\nCNNs have the same key components of the neural networks we saw before but, in this case, their loss function can be for instance an SVM or softmax and, most importantly, they assume all inputs are images. In particular, regular neural networks do not scale well to images, which is why we can have this subset of neural networks as a specialised subtype particular to the problematics commonly found in images.\nCNNs have three types of layers: Convolutional Layer, Pooling Layer and Fully-Connected Layer (add ReLU as an elementwise transformation). Stacking these results in the full architecture of a CNN. As the image moves through the network, width and height shrink while depth grows, encoding increasingly abstract features. The four main layer types are:\n\nCONV (Convolutional Layer). The core of the network. A set of small learned filters slides across the spatial dimensions of the input. At each position, it computes a dot product between the filter weights and the local patch of the image. Since weights can be any real number (positive or negative), the output can also be negative or positive. Each filter produces one 2D activation map, and stacking all of them gives the new depth dimension. Early filters learn to detect edges and textures; deeper filters detect increasingly abstract patterns.\nReLU (Rectified Linear Unit). Applied elementwise immediately after convolution. The function is simply \\(f(x) = \\max(0, x)\\): positive values pass through unchanged, negative values are set to zero. A negative activation means the filter did not detect its feature at that location, so ReLU converts it to “nothing detected.” Without this nonlinearity, stacking layers would collapse into a single linear transformation and the network would lose expressive power.\nPOOL (Pooling Layer). Downsamples the spatial dimensions. The most common version is max pooling: a 2x2 window slides across each activation map and keeps only the maximum value in each patch, discarding the rest. This halves the width and height while preserving depth. The intuition is coarse-graining: integrating out fine-grained spatial detail to keep only the dominant signal, reducing computation and making the representation more compact.\n\nFC (Fully-Connected Layer). At the end of the network, once the spatial dimensions have been reduced to a small size, the volume is flattened and passed through one or more fully-connected layers, exactly as in a standard neural network. The final FC layer outputs one score per class, and the class with the highest score is the prediction.\nThe full pipeline for a simple CNN is therefore: detect local features (CONV), introduce nonlinearity (ReLU), reduce spatial resolution (POOL), repeat until compact, then classify (FC).",
     "crumbs": [
-      "Notes",
-      "Open Questions"
+      "Curriculum",
+      "Stage 2: Convolutional Neural Networks"
     ]
   }
 ]

@@ -11,13 +11,11 @@ computer vision, multimodal models, and representation learning.
 This is not a polished textbook. It is a living document -- updated as I read, 
 think, and get things wrong.
 
-## What this covers
+## Chapters
 
-- Neural network fundamentals (with a physicist's framing)
-- Computer vision architectures: CNNs, ViTs, attention
-- Vision-language models, particularly CLIP
-- Mechanistic interpretability and activation steering
-- Evaluation, benchmarks, and what they actually measure
+- [Stage 0 -- Curriculum overview](curriculum/00-overview.qmd)
+- [Stage 1 -- How neural networks learn](curriculum/01-neural-networks.qmd)
+- [Stage 2 -- Convolutional neural networks](curriculum/02-convolutional-neural-networks.qmd)
 
 ## Background
 

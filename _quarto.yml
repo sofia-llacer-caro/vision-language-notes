@@ -10,17 +10,12 @@ website:
         text: Home
       - href: curriculum/00-overview.qmd
         text: Curriculum
-      - href: notes/reading-log.qmd
-        text: Notes
   sidebar:
     - title: "Curriculum"
       contents:
         - curriculum/00-overview.qmd
         - curriculum/01-neural-networks.qmd
-    - title: "Notes"
-      contents:
-        - notes/reading-log.qmd
-        - notes/questions.qmd
+        - curriculum/02-convolutional-neural-networks.qmd
 
 format:
   html:

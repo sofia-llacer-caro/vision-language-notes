@@ -1,9 +1,0 @@
- ---
-title: "Reading Log"
----
-
-A running log of things read, with brief impressions.
-
-| Date | Title | Type | Notes |
-|---|---|---|---|
-| | | | |
