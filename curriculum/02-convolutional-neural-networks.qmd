@@ -55,7 +55,7 @@ CNNs have three types of layers: Convolutional Layer, Pooling Layer and Fully-Co
 
 - **POOL (Pooling Layer).** Downsamples the spatial dimensions. The most common version is max pooling: a 2x2 window slides across each activation map and keeps only the maximum value in each patch, discarding the rest. This halves the width and height while preserving depth. Other examples are average pooling, for instance. The intuition is coarse-graining: integrating out fine-grained spatial detail to keep only the dominant signal, reducing computation and making the representation more compact.
 
-**FC (Fully-Connected Layer).** At the end of the network, once the spatial dimensions have been reduced to a small size, the volume is flattened and passed through one or more fully-connected layers, exactly as in a standard neural network. The final FC layer outputs one score per class, and the class with the highest score is the prediction.
+- **FC (Fully-Connected Layer).** At the end of the network, once the spatial dimensions have been reduced to a small size, the volume is flattened and passed through one or more fully-connected layers, exactly as in a standard neural network. The final FC layer outputs one score per class, and the class with the highest score is the prediction.
 
 The full pipeline for a simple CNN is therefore: detect local features (CONV), introduce nonlinearity (ReLU), (repeat as many times as necessary), reduce spatial resolution (POOL), repeat until compact, then classify (FC).
 
