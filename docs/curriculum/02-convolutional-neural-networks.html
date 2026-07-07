@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2026-07-03">
+<meta name="dcterms.date" content="2026-07-07">
 
 <title>Stage 2: Convolutional Neural Networks – Vision-Language Notes</title>
 <style>
@@ -186,7 +186,11 @@ window.Quarto = {
   <li><a href="#checkpoint" id="toc-checkpoint" class="nav-link" data-scroll-target="#checkpoint">Checkpoint</a></li>
   <li><a href="#my-answers" id="toc-my-answers" class="nav-link" data-scroll-target="#my-answers">My answers</a></li>
   <li><a href="#open-questions" id="toc-open-questions" class="nav-link" data-scroll-target="#open-questions">Open questions</a></li>
-  <li><a href="#notes" id="toc-notes" class="nav-link" data-scroll-target="#notes">Notes</a></li>
+  <li><a href="#notes" id="toc-notes" class="nav-link" data-scroll-target="#notes">Notes</a>
+  <ul class="collapse">
+  <li><a href="#definition-core-elements" id="toc-definition-core-elements" class="nav-link" data-scroll-target="#definition-core-elements">Definition &amp; Core Elements</a></li>
+  <li><a href="#architecture-case-study" id="toc-architecture-case-study" class="nav-link" data-scroll-target="#architecture-case-study">Architecture Case Study</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -206,7 +210,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">July 3, 2026</p>
+      <p class="date">July 7, 2026</p>
     </div>
   </div>
   
@@ -246,27 +250,41 @@ window.Quarto = {
 </section>
 <section id="my-answers" class="level2">
 <h2 class="anchored" data-anchor-id="my-answers">My answers</h2>
-<p><em>(to be filled after reading)</em></p>
+<ol type="1">
+<li>A convolutional layer extracts local features from an image by sliding a small filter across the spatial dimensions and computing a dot product at each position. Each filter learns to detect one specific pattern (an edge, a texture, a colour gradient). Stacking multiple convolutional layers produces increasing abstraction: early layers detect simple features, deeper layers detect combinations of those features into increasingly complex patterns.</li>
+<li>Translation equivariance means that if a feature shifts position in the input image, its corresponding activation in the feature map shifts by the same amount. This is a useful assumption for images because objects can appear anywhere in the frame: a cat in the top left and a cat in the bottom right are still cats, and the filter should detect both without needing to be retrained for each location.</li>
+<li>As you go deeper in a CNN, the representation gains abstraction and depth: more filters track more distinct and complex features simultaneously. It loses spatial resolution, as width and height shrink through pooling. Fine-grained spatial detail is traded for richer, more abstract feature representations.</li>
+<li>Residual connections solve the vanishing gradient problem. As networks get deeper, the gradient signal shrinks as it travels backward through many layers during backpropagation, causing early layers to stop learning effectively. Skip connections give gradients a direct path backward by adding the input of a layer directly to its output, bypassing the transformation. This allows very deep networks to train effectively without degradation in performance.</li>
+</ol>
 </section>
 <section id="open-questions" class="level2">
 <h2 class="anchored" data-anchor-id="open-questions">Open questions</h2>
 <ul>
-<li><strong>“3D volumes of neurons” –&gt; what does this mean? 3D is already volume if we’re talking space coordinates. What dimensions are we talking about exaclty? What space are they living in?</strong>; Apparently by 3D they mean a tensor in 3 dimensions. For an input image the three dimensions could for instance be the width and height of an image, and the “depth” or third dimension could be the color channels (3 for RGB). So a 32x32 color image is a 32x32x3 array of numbers.</li>
+<li><p><strong>“3D volumes of neurons” –&gt; what does this mean? 3D is already volume if we’re talking space coordinates. What dimensions are we talking about exaclty? What space are they living in?</strong>; Apparently by 3D they mean a tensor in 3 dimensions. For an input image the three dimensions could for instance be the width and height of an image, and the “depth” or third dimension could be the color channels (3 for RGB). So a 32x32 color image is a 32x32x3 array of numbers.</p></li>
+<li><p><strong>How do you choose the activation filters? Are they randomly initialised?</strong>; Yes, but with different values, since otherways they’d all be learning the same thing.</p></li>
 </ul>
 </section>
 <section id="notes" class="level2">
 <h2 class="anchored" data-anchor-id="notes">Notes</h2>
+<section id="definition-core-elements" class="level3">
+<h3 class="anchored" data-anchor-id="definition-core-elements">Definition &amp; Core Elements</h3>
 <p>CNNs have the same key components of the neural networks we saw before but, in this case, their loss function can be for instance an SVM or softmax and, most importantly, they assume all inputs are images. In particular, regular neural networks do not scale well to images, which is why we can have this subset of neural networks as a specialised subtype particular to the problematics commonly found in images.</p>
 <p>CNNs have three types of layers: Convolutional Layer, Pooling Layer and Fully-Connected Layer (add ReLU as an elementwise transformation). Stacking these results in the full architecture of a CNN. As the image moves through the network, width and height shrink while depth grows, encoding increasingly abstract features. The four main layer types are:</p>
 <ul>
 <li><p><strong>CONV (Convolutional Layer).</strong> The core of the network. A set of small learned filters slides across the spatial dimensions of the input. At each position, it computes a dot product between the filter weights and the local patch of the image. Since weights can be any real number (positive or negative), the output can also be negative or positive. Each filter produces one 2D activation map, and stacking all of them gives the new depth dimension. Early filters learn to detect edges and textures; deeper filters detect increasingly abstract patterns.</p></li>
 <li><p><strong>ReLU (Rectified Linear Unit).</strong> Applied elementwise immediately after convolution. The function is simply <span class="math inline">\(f(x) = \max(0, x)\)</span>: positive values pass through unchanged, negative values are set to zero. A negative activation means the filter did not detect its feature at that location, so ReLU converts it to “nothing detected.” Without this nonlinearity, stacking layers would collapse into a single linear transformation and the network would lose expressive power.</p></li>
-<li><p><strong>POOL (Pooling Layer).</strong> Downsamples the spatial dimensions. The most common version is max pooling: a 2x2 window slides across each activation map and keeps only the maximum value in each patch, discarding the rest. This halves the width and height while preserving depth. The intuition is coarse-graining: integrating out fine-grained spatial detail to keep only the dominant signal, reducing computation and making the representation more compact.</p></li>
+<li><p><strong>POOL (Pooling Layer).</strong> Downsamples the spatial dimensions. The most common version is max pooling: a 2x2 window slides across each activation map and keeps only the maximum value in each patch, discarding the rest. This halves the width and height while preserving depth. Other examples are average pooling, for instance. The intuition is coarse-graining: integrating out fine-grained spatial detail to keep only the dominant signal, reducing computation and making the representation more compact.</p></li>
 </ul>
 <p><strong>FC (Fully-Connected Layer).</strong> At the end of the network, once the spatial dimensions have been reduced to a small size, the volume is flattened and passed through one or more fully-connected layers, exactly as in a standard neural network. The final FC layer outputs one score per class, and the class with the highest score is the prediction.</p>
-<p>The full pipeline for a simple CNN is therefore: detect local features (CONV), introduce nonlinearity (ReLU), reduce spatial resolution (POOL), repeat until compact, then classify (FC).</p>
+<p>The full pipeline for a simple CNN is therefore: detect local features (CONV), introduce nonlinearity (ReLU), (repeat as many times as necessary), reduce spatial resolution (POOL), repeat until compact, then classify (FC).</p>
+</section>
+<section id="architecture-case-study" class="level3">
+<h3 class="anchored" data-anchor-id="architecture-case-study">Architecture Case Study</h3>
+<p>A particular case of a relevant CNN architecture is <strong>ResNet</strong>. In general, more layers tends to work better. However, one problem which arises with this is that if you just naively increase the number of layers, you end up having a higher training error. In ResNets, however, the training and testing error have a consistent improvement as you increase the number of layers.</p>
+<p>In a resnet, there are skip connections. What that means is that, instead of computing a whole layer again, you’re just computing an addition between layer and layer without getting rid of the original layer again and again. Essentially, if you have an identity matrix, you’re just computing a changing <span class="math inline">\(\delta\)</span> on top of it, instead of computing the whole changing matrix again and again. This makes it easier to compute with and optimise.</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
