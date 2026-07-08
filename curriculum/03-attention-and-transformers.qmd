@@ -4,6 +4,8 @@ date: today
 ---
 
 ## Reading
+3Blue1Brown introduction to attention in tansformers as a first foot in.
+[https://www.youtube.com/watch?v=eMlx5fFNoYc](https://www.youtube.com/watch?v=eMlx5fFNoYc)
 
 Vaswani et al. 2017, *Attention is All You Need*.
 [https://arxiv.org/abs/1706.03762](https://arxiv.org/abs/1706.03762)
