@@ -1,6 +1,8 @@
 project:
   type: website
   output-dir: docs
+  resources:
+    - .nojekyll
 
 website:
   title: "Vision-Language Notes"
@@ -16,6 +18,7 @@ website:
         - curriculum/00-overview.qmd
         - curriculum/01-neural-networks.qmd
         - curriculum/02-convolutional-neural-networks.qmd
+        - curriculum/03-attention-and-transformers.qmd
 
 format:
   html:
