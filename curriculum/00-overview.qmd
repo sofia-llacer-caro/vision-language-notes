@@ -53,7 +53,7 @@ of fairness metrics.
 | Stage | Status |
 |---|---|
 | 1 -- Neural networks | finished |
-| 2 -- CNNs | in progress |
-| 3 -- Attention | not started |
+| 2 -- CNNs | finished |
+| 3 -- Attention | in progress |
 | 4 -- CLIP | not started |
 | 5 -- Evaluation | not started |
