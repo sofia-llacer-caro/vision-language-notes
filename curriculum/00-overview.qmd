@@ -42,11 +42,13 @@ Contrastive learning, shared embedding spaces, zero-shot classification.
 Why the training data matters enormously.
 
 ### Stage 5 -- Evaluation and benchmarks
-**Core reading:** Barocas, Hardt, Narayanan -- *Fairness and Machine Learning*, 
-selected chapters. [Free online](https://fairmlbook.org)
+[Reference readings in parallel to the rest of the syllabus]
 
-What benchmarks actually measure. Subgroup performance. The incompatibility 
-of fairness metrics.
+[comment]: <> (**Core reading:** Barocas, Hardt, Narayanan -- *Fairness and Machine Learning*, selected chapters. [Free online](https://fairmlbook.org)
+
+[comment]: <> (What benchmarks actually measure. Subgroup performance. The incompatibility of fairness metrics.)
+
+
 
 ## Status
 
@@ -56,4 +58,4 @@ of fairness metrics.
 | 2 -- CNNs | finished |
 | 3 -- Attention | in progress |
 | 4 -- CLIP | not started |
-| 5 -- Evaluation | not started |
+| 5 -- Evaluation | in progress |

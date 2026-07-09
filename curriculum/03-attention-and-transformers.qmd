@@ -48,7 +48,7 @@ for images? What is the equivalent of a "token" in this setting?
 *(to be filled after reading)*
 
 ## Open questions
-- **What is a softmax?;**
+- **How is softmax mathematically described? What function is it?;**
 
 ## Notes
 
