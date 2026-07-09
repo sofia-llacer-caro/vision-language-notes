@@ -44,11 +44,7 @@ Why the training data matters enormously.
 ### Stage 5 -- Evaluation and benchmarks
 [Reference readings in parallel to the rest of the syllabus]
 
-[comment]: <> (**Core reading:** Barocas, Hardt, Narayanan -- *Fairness and Machine Learning*, selected chapters. [Free online](https://fairmlbook.org)
-
-[comment]: <> (What benchmarks actually measure. Subgroup performance. The incompatibility of fairness metrics.)
-
-
+[comment]: <> (Core reading: Barocas, Hardt, Narayanan -- Fairness and Machine Learning, selected chapters. Free online at https://fairmlbook.org. What benchmarks actually measure. Subgroup performance. The incompatibility of fairness metrics.)
 
 ## Status
 

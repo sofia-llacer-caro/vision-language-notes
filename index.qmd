@@ -8,8 +8,8 @@ My background is in physics and applied mathematics (complex systems),
 and these notes document the technical foundations I am building as I go deeper into 
 computer vision, multimodal models, and representation learning.
 
-This is not a polished textbook. It is a living document -- updated as I read, 
-think, and get things wrong.
+This is not a polished textbook. It is a living document updated as I read, 
+think, find new resources and get things wrong. Note that the questions guiding the concepts to look out for are Claude-generated. You may use this notebook as a template for your own curriculum.
 
 ## Chapters
 
@@ -17,8 +17,3 @@ think, and get things wrong.
 - [Stage 1 -- How neural networks learn](curriculum/01-neural-networks.qmd)
 - [Stage 2 -- Convolutional neural networks](curriculum/02-convolutional-neural-networks.qmd)
 - [Stage 3 -- Attention and transformers](curriculum/03-attention-and-transformers.qmd)
-
-## Background
-
-PhD candidate in computer vision and vision-language models.
-BSc Physics, MSc Modelling for Science and Engineering (complex systems track).
