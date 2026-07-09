@@ -16,6 +16,7 @@ think, and get things wrong.
 - [Stage 0 -- Curriculum overview](curriculum/00-overview.qmd)
 - [Stage 1 -- How neural networks learn](curriculum/01-neural-networks.qmd)
 - [Stage 2 -- Convolutional neural networks](curriculum/02-convolutional-neural-networks.qmd)
+- [Stage 3 -- Attention and transformers](curriculum/03-attention-and-transformers.qmd)
 
 ## Background
 
