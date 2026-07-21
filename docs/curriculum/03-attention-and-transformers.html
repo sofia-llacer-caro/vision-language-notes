@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2026-07-13">
+<meta name="dcterms.date" content="2026-07-21">
 
 <title>Stage 3: Attention and Transformers – Vision-Language Notes</title>
 <style>
@@ -177,6 +177,12 @@ window.Quarto = {
  <span class="menu-text">Stage 3: Attention and Transformers</span></a>
   </div>
 </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../curriculum/04-clip-and-vlms.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Stage 4: CLIP and Vision-Language Models</span></a>
+  </div>
+</li>
     </ul>
     </div>
 </nav>
@@ -217,7 +223,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">July 13, 2026</p>
+      <p class="date">July 21, 2026</p>
     </div>
   </div>
   
@@ -263,15 +269,22 @@ window.Quarto = {
 </section>
 <section id="my-answers" class="level2">
 <h2 class="anchored" data-anchor-id="my-answers">My answers</h2>
-<p><em>(to be filled after reading)</em></p>
+<ol type="1">
+<li>It is computing the semantic relationship between different components of a corpus, allowing to, for instance, dive deeper into the particular meaning in context of a polysemic word or update a given noun to incorporate adjectives perviously mentioned about them. When it comes to the Query, Key and Value, from the point of view of a given word, Query is asking “which words are relevant to me?”; Key is saying “here is what I contain”; and Value is deciding which information gets put forward.</li>
+<li>With attention, you don’t have a “window” that you “slide”. Instead, you are attending to all other tokens or patches in the input, meaning that this is a much more powerful mechanism, especially on long-range dependencies, since, no matter where they are, dependencies are taken into accoun the same way. On top of that, self-attention helps clear out some possible semantinc misunderstandigs which can only be resolved with context and neighboring words.</li>
+<li>Multi-head attention is a mechanism in which attention is computed multiple times in parallel (in the case of GPT, for instance, it’s 96). This is done as to capture slightly different contextual aspects of language in each of them.</li>
+<li>Positional encoding, which works by adding a fixed vector to each token embedding before processing, encoding its position in the sequence. Without this the transformer would be completely permutation invariant, even though shuffling the tokens would give the same output, which is clearly wrong.</li>
+<li>It works the same, but with image patches of 16x16 pixels which are then flattened and computed the same. The equivalent of a token would be an image patch.</li>
+</ol>
 </section>
 <section id="open-questions" class="level2">
 <h2 class="anchored" data-anchor-id="open-questions">Open questions</h2>
 <ul>
 <li><strong>How is softmax mathematically described? What function is it?;</strong> It is a generalisation of the logistic function to multiple dimensions.</li>
-<li><strong>How are embeddings calculated?;</strong></li>
-<li><strong>Datasets: which ones are there? Which ones are most famous, what are they generally used for?;</strong></li>
-<li><strong>What is a TPU?;</strong></li>
+<li><strong>How are embeddings calculated?;</strong> It used to be done with networks such as word2vec, but nowadays everything is computed directly within the transformer architecture. The Transformer uses a random initialization of the weight matrix and refines these weights during training i.e.&nbsp;it learns its own word embeddings.</li>
+<li><strong>Datasets: which ones are there? Which ones are most famous, what are they generally used for?;</strong> Some that I’ve heard of so far: LAION400M, MSCOCO, Flickr30k</li>
+<li><strong>What is a TPU?;</strong> It means Tensor Processing Unit, a computational processing unit.</li>
+<li><strong>What is a “latent” space? Why is it called that?;</strong> I don’t know why it’s called that way, but it’s the same as embedding space. Latent as in “hidden”?</li>
 </ul>
 </section>
 <section id="notes" class="level2">

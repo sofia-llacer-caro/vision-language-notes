@@ -52,6 +52,6 @@ Why the training data matters enormously.
 |---|---|
 | 1 -- Neural networks | finished |
 | 2 -- CNNs | finished |
-| 3 -- Attention | in progress |
-| 4 -- CLIP | not started |
+| 3 -- Attention | finished |
+| 4 -- CLIP | in progress |
 | 5 -- Evaluation | in progress |

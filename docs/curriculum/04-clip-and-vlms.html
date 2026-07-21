@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2026-07-21">
 
-<title>overview – Vision-Language Notes</title>
+<title>Stage 4: CLIP and Vision-Language Models – Vision-Language Notes</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -111,7 +112,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../curriculum/00-overview.html">Curriculum Overview</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../curriculum/04-clip-and-vlms.html">Stage 4: CLIP and Vision-Language Models</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -125,7 +126,7 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../curriculum/00-overview.html" class="sidebar-item-text sidebar-link active">
+  <a href="../curriculum/00-overview.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Curriculum Overview</span></a>
   </div>
 </li>
@@ -149,7 +150,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../curriculum/04-clip-and-vlms.html" class="sidebar-item-text sidebar-link">
+  <a href="../curriculum/04-clip-and-vlms.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Stage 4: CLIP and Vision-Language Models</span></a>
   </div>
 </li>
@@ -163,16 +164,12 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#dependency-structure" id="toc-dependency-structure" class="nav-link active" data-scroll-target="#dependency-structure">Dependency structure</a></li>
-  <li><a href="#stages" id="toc-stages" class="nav-link" data-scroll-target="#stages">Stages</a>
-  <ul class="collapse">
-  <li><a href="#stage-1-how-neural-networks-learn" id="toc-stage-1-how-neural-networks-learn" class="nav-link" data-scroll-target="#stage-1-how-neural-networks-learn">Stage 1 – How neural networks learn</a></li>
-  <li><a href="#stage-2-convolutional-neural-networks" id="toc-stage-2-convolutional-neural-networks" class="nav-link" data-scroll-target="#stage-2-convolutional-neural-networks">Stage 2 – Convolutional Neural Networks</a></li>
-  <li><a href="#stage-3-attention-and-transformers" id="toc-stage-3-attention-and-transformers" class="nav-link" data-scroll-target="#stage-3-attention-and-transformers">Stage 3 – Attention and Transformers</a></li>
-  <li><a href="#stage-4-clip-and-vision-language-models" id="toc-stage-4-clip-and-vision-language-models" class="nav-link" data-scroll-target="#stage-4-clip-and-vision-language-models">Stage 4 – CLIP and vision-language models</a></li>
-  <li><a href="#stage-5-evaluation-and-benchmarks" id="toc-stage-5-evaluation-and-benchmarks" class="nav-link" data-scroll-target="#stage-5-evaluation-and-benchmarks">Stage 5 – Evaluation and benchmarks</a></li>
-  </ul></li>
-  <li><a href="#status" id="toc-status" class="nav-link" data-scroll-target="#status">Status</a></li>
+  <li><a href="#reading" id="toc-reading" class="nav-link active" data-scroll-target="#reading">Reading</a></li>
+  <li><a href="#key-concepts-to-watch-for" id="toc-key-concepts-to-watch-for" class="nav-link" data-scroll-target="#key-concepts-to-watch-for">Key concepts to watch for</a></li>
+  <li><a href="#checkpoint" id="toc-checkpoint" class="nav-link" data-scroll-target="#checkpoint">Checkpoint</a></li>
+  <li><a href="#my-answers" id="toc-my-answers" class="nav-link" data-scroll-target="#my-answers">My answers</a></li>
+  <li><a href="#open-questions" id="toc-open-questions" class="nav-link" data-scroll-target="#open-questions">Open questions</a></li>
+  <li><a href="#notes" id="toc-notes" class="nav-link" data-scroll-target="#notes">Notes</a></li>
   </ul>
 </nav>
     </div>
@@ -181,7 +178,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Curriculum Overview</h1>
+<h1 class="title">Stage 4: CLIP and Vision-Language Models</h1>
 </div>
 
 
@@ -189,6 +186,12 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-title-meta">
 
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">July 21, 2026</p>
+    </div>
+  </div>
   
     
   </div>
@@ -198,70 +201,44 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>A structured path through the technical foundations of vision-language models, designed for someone coming from physics and applied mathematics.</p>
-<section id="dependency-structure" class="level2">
-<h2 class="anchored" data-anchor-id="dependency-structure">Dependency structure</h2>
-<p>Each stage builds on the previous. The through-line is this: all of these models are learning to compress high-dimensional data into lower-dimensional representations. What gets preserved and what gets discarded in that compression is the technical core of most interesting questions in this space.</p>
+<section id="reading" class="level2">
+<h2 class="anchored" data-anchor-id="reading">Reading</h2>
+<p>Radford et al.&nbsp;2021, <em>Learning Transferable Visual Models From Natural Language Supervision</em>. <a href="https://arxiv.org/abs/2103.00020">https://arxiv.org/abs/2103.00020</a></p>
+<p>As a gentler entry point before the paper, watch: <strong>“CLIP explained” by Yannic Kilcher</strong> – search on YouTube, roughly 30 minutes.</p>
+<p>Estimated time: 4-5 hours.</p>
 </section>
-<section id="stages" class="level2">
-<h2 class="anchored" data-anchor-id="stages">Stages</h2>
-<section id="stage-1-how-neural-networks-learn" class="level3">
-<h3 class="anchored" data-anchor-id="stage-1-how-neural-networks-learn">Stage 1 – How neural networks learn</h3>
-<p><strong>Core reading:</strong> Nielsen, <em>Neural Networks and Deep Learning</em>, chapters 1-2. <a href="http://neuralnetworksanddeeplearning.com">Free online</a></p>
-<p>The foundation. Forward pass, loss functions, gradient descent, backpropagation.</p>
+<section id="key-concepts-to-watch-for" class="level2">
+<h2 class="anchored" data-anchor-id="key-concepts-to-watch-for">Key concepts to watch for</h2>
+<ul>
+<li>Contrastive learning: what the training objective is and why it works</li>
+<li>Shared embedding space: what it means for images and text to live in the same space</li>
+<li>InfoNCE loss: the specific contrastive loss CLIP uses and its information-theoretic interpretation</li>
+<li>Zero-shot classification: how CLIP classifies images it has never explicitly been trained on</li>
+<li>Training data: what LAION and web-scraped image-text pairs look like, and why this matters</li>
+<li>Cosine similarity: how “closeness” is measured in the embedding space</li>
+</ul>
 </section>
-<section id="stage-2-convolutional-neural-networks" class="level3">
-<h3 class="anchored" data-anchor-id="stage-2-convolutional-neural-networks">Stage 2 – Convolutional Neural Networks</h3>
-<p><strong>Core reading:</strong> CS231n notes on CNNs (Stanford, free online)</p>
-<p>Spatial locality and translation equivariance as inductive biases. Convolution as learned feature detection. Residual connections.</p>
+<section id="checkpoint" class="level2">
+<h2 class="anchored" data-anchor-id="checkpoint">Checkpoint</h2>
+<p>After finishing the reading, answer these in your own words:</p>
+<ol type="1">
+<li>What is contrastive learning? What is the model being trained to do, and what does the loss function reward and penalise?</li>
+<li>What does it mean for images and text to share an embedding space? What is geometrically happening when a photo of a dog and the caption “a photo of a dog” end up close together?</li>
+<li>How does zero-shot classification work in CLIP? Walk through the mechanism step by step.</li>
+<li>CLIP is trained on web-scraped image-text pairs. What are the implications of this for what the embedding space learns?</li>
+<li>Why is cosine similarity used to measure closeness rather than Euclidean distance?</li>
+</ol>
+<p><em>(answers below)</em></p>
 </section>
-<section id="stage-3-attention-and-transformers" class="level3">
-<h3 class="anchored" data-anchor-id="stage-3-attention-and-transformers">Stage 3 – Attention and Transformers</h3>
-<p><strong>Core reading:</strong> Vaswani et al.&nbsp;2017 (<em>Attention is All You Need</em>) + Jay Alammar’s <em>The Illustrated Transformer</em></p>
-<p>The architecture that replaced everything else. Self-attention as a soft, differentiable, input-dependent weighted average. Vision Transformers (ViTs) as the direct precursor to CLIP’s image encoder.</p>
+<section id="my-answers" class="level2">
+<h2 class="anchored" data-anchor-id="my-answers">My answers</h2>
+<p><em>(to be filled after reading)</em></p>
 </section>
-<section id="stage-4-clip-and-vision-language-models" class="level3">
-<h3 class="anchored" data-anchor-id="stage-4-clip-and-vision-language-models">Stage 4 – CLIP and vision-language models</h3>
-<p><strong>Core reading:</strong> Radford et al.&nbsp;2021 (<em>Learning Transferable Visual Models From Natural Language Supervision</em>)</p>
-<p>Contrastive learning, shared embedding spaces, zero-shot classification. Why the training data matters enormously.</p>
+<section id="open-questions" class="level2">
+<h2 class="anchored" data-anchor-id="open-questions">Open questions</h2>
 </section>
-<section id="stage-5-evaluation-and-benchmarks" class="level3">
-<h3 class="anchored" data-anchor-id="stage-5-evaluation-and-benchmarks">Stage 5 – Evaluation and benchmarks</h3>
-<p>[Reference readings in parallel to the rest of the syllabus]</p>
-</section>
-</section>
-<section id="status" class="level2">
-<h2 class="anchored" data-anchor-id="status">Status</h2>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Stage</th>
-<th>Status</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>1 – Neural networks</td>
-<td>finished</td>
-</tr>
-<tr class="even">
-<td>2 – CNNs</td>
-<td>finished</td>
-</tr>
-<tr class="odd">
-<td>3 – Attention</td>
-<td>finished</td>
-</tr>
-<tr class="even">
-<td>4 – CLIP</td>
-<td>in progress</td>
-</tr>
-<tr class="odd">
-<td>5 – Evaluation</td>
-<td>in progress</td>
-</tr>
-</tbody>
-</table>
+<section id="notes" class="level2">
+<h2 class="anchored" data-anchor-id="notes">Notes</h2>
 
 
 </section>

@@ -1,0 +1,49 @@
+---
+title: "Stage 4: CLIP and Vision-Language Models"
+date: today
+---
+
+## Reading
+
+Radford et al. 2021, *Learning Transferable Visual Models From Natural Language Supervision*.
+[https://arxiv.org/abs/2103.00020](https://arxiv.org/abs/2103.00020)
+
+As a gentler entry point before the paper, watch:
+**"CLIP explained" by Yannic Kilcher** -- search on YouTube, roughly 30 minutes.
+
+Estimated time: 4-5 hours.
+
+## Key concepts to watch for
+
+- Contrastive learning: what the training objective is and why it works
+- Shared embedding space: what it means for images and text to live in the same space
+- InfoNCE loss: the specific contrastive loss CLIP uses and its information-theoretic interpretation
+- Zero-shot classification: how CLIP classifies images it has never explicitly been trained on
+- Training data: what LAION and web-scraped image-text pairs look like, and why this matters
+- Cosine similarity: how "closeness" is measured in the embedding space
+
+## Checkpoint
+
+After finishing the reading, answer these in your own words:
+
+1. What is contrastive learning? What is the model being trained to do, 
+and what does the loss function reward and penalise?
+2. What does it mean for images and text to share an embedding space? 
+What is geometrically happening when a photo of a dog and the caption 
+"a photo of a dog" end up close together?
+3. How does zero-shot classification work in CLIP? Walk through the 
+mechanism step by step.
+4. CLIP is trained on web-scraped image-text pairs. What are the 
+implications of this for what the embedding space learns?
+5. Why is cosine similarity used to measure closeness rather than 
+Euclidean distance?
+
+*(answers below)*
+
+## My answers
+
+*(to be filled after reading)*
+
+## Open questions
+
+## Notes

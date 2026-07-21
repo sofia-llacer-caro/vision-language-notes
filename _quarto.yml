@@ -19,6 +19,7 @@ website:
         - curriculum/01-neural-networks.qmd
         - curriculum/02-convolutional-neural-networks.qmd
         - curriculum/03-attention-and-transformers.qmd
+        - curriculum/04-clip-and-vlms.qmd
 
 format:
   html:

@@ -14,124 +14,80 @@
     "text": "Chapters\n\nStage 0 – Curriculum overview\nStage 1 – How neural networks learn\nStage 2 – Convolutional neural networks\nStage 3 – Attention and transformers"
   },
   {
-    "objectID": "curriculum/02-convolutional-neural-networks.html",
-    "href": "curriculum/02-convolutional-neural-networks.html",
-    "title": "Stage 2: Convolutional Neural Networks",
+    "objectID": "curriculum/03-attention-and-transformers.html",
+    "href": "curriculum/03-attention-and-transformers.html",
+    "title": "Stage 3: Attention and Transformers",
     "section": "",
-    "text": "CS231n, Convolutional Neural Networks for Visual Recognition, module on CNNs. https://cs231n.github.io/convolutional-networks\nEstimated time: 2-3 hours.",
+    "text": "3Blue1Brown introduction to attention in tansformers as a first foot in. https://www.youtube.com/watch?v=eMlx5fFNoYc\nInteractive transformer. https://poloclub.github.io/transformer-explainer/\nVaswani et al. 2017, Attention is All You Need. https://arxiv.org/abs/1706.03762\nJay Alammar, The Illustrated Transformer. https://jalammar.github.io/illustrated-transformer\nStart with the Illustrated Transformer, it is much more accessible than the paper. Then read the paper to see the formal treatment.\nEstimated time: 4-5 hours.",
     "crumbs": [
       "Curriculum",
-      "Stage 2: Convolutional Neural Networks"
+      "Stage 3: Attention and Transformers"
     ]
   },
   {
-    "objectID": "curriculum/02-convolutional-neural-networks.html#reading",
-    "href": "curriculum/02-convolutional-neural-networks.html#reading",
-    "title": "Stage 2: Convolutional Neural Networks",
+    "objectID": "curriculum/03-attention-and-transformers.html#reading",
+    "href": "curriculum/03-attention-and-transformers.html#reading",
+    "title": "Stage 3: Attention and Transformers",
     "section": "",
-    "text": "CS231n, Convolutional Neural Networks for Visual Recognition, module on CNNs. https://cs231n.github.io/convolutional-networks\nEstimated time: 2-3 hours.",
+    "text": "3Blue1Brown introduction to attention in tansformers as a first foot in. https://www.youtube.com/watch?v=eMlx5fFNoYc\nInteractive transformer. https://poloclub.github.io/transformer-explainer/\nVaswani et al. 2017, Attention is All You Need. https://arxiv.org/abs/1706.03762\nJay Alammar, The Illustrated Transformer. https://jalammar.github.io/illustrated-transformer\nStart with the Illustrated Transformer, it is much more accessible than the paper. Then read the paper to see the formal treatment.\nEstimated time: 4-5 hours.",
     "crumbs": [
       "Curriculum",
-      "Stage 2: Convolutional Neural Networks"
+      "Stage 3: Attention and Transformers"
     ]
   },
   {
-    "objectID": "curriculum/02-convolutional-neural-networks.html#key-concepts-to-watch-for",
-    "href": "curriculum/02-convolutional-neural-networks.html#key-concepts-to-watch-for",
-    "title": "Stage 2: Convolutional Neural Networks",
+    "objectID": "curriculum/03-attention-and-transformers.html#key-concepts-to-watch-for",
+    "href": "curriculum/03-attention-and-transformers.html#key-concepts-to-watch-for",
+    "title": "Stage 3: Attention and Transformers",
     "section": "Key concepts to watch for",
-    "text": "Key concepts to watch for\n\nConvolution: what it actually does to an image mathematically\nInductive biases: spatial locality and translation equivariance, and why they matter\nFeature maps: what gets detected at each layer, and how abstraction builds up\nPooling: coarse-graining the representation\nResidual connections: why depth was hard before ResNets, and what skip connections solve",
+    "text": "Key concepts to watch for\n\nThe attention mechanism: what it is computing and why it is useful\nQuery, Key, Value: what these three vectors represent and where they come from\nSelf-attention: how tokens attend to each other within a sequence\nMulti-head attention: why you want several attention mechanisms running in parallel\nPositional encoding: why it is needed and how it works\nVision Transformers (ViTs): how the transformer architecture is adapted for images",
     "crumbs": [
       "Curriculum",
-      "Stage 2: Convolutional Neural Networks"
+      "Stage 3: Attention and Transformers"
     ]
   },
   {
-    "objectID": "curriculum/02-convolutional-neural-networks.html#checkpoint",
-    "href": "curriculum/02-convolutional-neural-networks.html#checkpoint",
-    "title": "Stage 2: Convolutional Neural Networks",
+    "objectID": "curriculum/03-attention-and-transformers.html#checkpoint",
+    "href": "curriculum/03-attention-and-transformers.html#checkpoint",
+    "title": "Stage 3: Attention and Transformers",
     "section": "Checkpoint",
-    "text": "Checkpoint\nAfter finishing the reading, answer these in your own words:\n\nWhat is a convolution doing to an image? What is the filter learning?\nWhat does “translation equivariance” mean, and why is it a useful assumption for images?\nAs you go deeper in a CNN, what happens to the representation? What is gained and what is lost?\nWhat problem do residual connections solve, and why does that matter for deep networks?\n\n(answers below)",
+    "text": "Checkpoint\nAfter finishing the reading, answer these in your own words:\n\nWhat is the attention mechanism computing? What is the intuition behind Query, Key, and Value?\nWhy is self-attention more powerful than convolution for capturing long-range dependencies?\nWhat is multi-head attention and why is it useful?\nCNNs have translation equivariance built in by design. Transformers do not: how do they compensate for this?\nHow does a Vision Transformer (ViT) adapt the transformer architecture for images? What is the equivalent of a “token” in this setting?\n\n(answers below)",
     "crumbs": [
       "Curriculum",
-      "Stage 2: Convolutional Neural Networks"
+      "Stage 3: Attention and Transformers"
     ]
   },
   {
-    "objectID": "curriculum/02-convolutional-neural-networks.html#my-answers",
-    "href": "curriculum/02-convolutional-neural-networks.html#my-answers",
-    "title": "Stage 2: Convolutional Neural Networks",
+    "objectID": "curriculum/03-attention-and-transformers.html#my-answers",
+    "href": "curriculum/03-attention-and-transformers.html#my-answers",
+    "title": "Stage 3: Attention and Transformers",
     "section": "My answers",
-    "text": "My answers\n\nA convolutional layer extracts local features from an image by sliding a small filter across the spatial dimensions and computing a dot product at each position. Each filter learns to detect one specific pattern (an edge, a texture, a colour gradient). Stacking multiple convolutional layers produces increasing abstraction: early layers detect simple features, deeper layers detect combinations of those features into increasingly complex patterns.\nTranslation equivariance means that if a feature shifts position in the input image, its corresponding activation in the feature map shifts by the same amount. This is a useful assumption for images because objects can appear anywhere in the frame: a cat in the top left and a cat in the bottom right are still cats, and the filter should detect both without needing to be retrained for each location.\nAs you go deeper in a CNN, the representation gains abstraction and depth: more filters track more distinct and complex features simultaneously. It loses spatial resolution, as width and height shrink through pooling. Fine-grained spatial detail is traded for richer, more abstract feature representations.\nResidual connections solve the vanishing gradient problem. As networks get deeper, the gradient signal shrinks as it travels backward through many layers during backpropagation, causing early layers to stop learning effectively. Skip connections give gradients a direct path backward by adding the input of a layer directly to its output, bypassing the transformation. This allows very deep networks to train effectively without degradation in performance.",
+    "text": "My answers\n\nIt is computing the semantic relationship between different components of a corpus, allowing to, for instance, dive deeper into the particular meaning in context of a polysemic word or update a given noun to incorporate adjectives perviously mentioned about them. When it comes to the Query, Key and Value, from the point of view of a given word, Query is asking “which words are relevant to me?”; Key is saying “here is what I contain”; and Value is deciding which information gets put forward.\nWith attention, you don’t have a “window” that you “slide”. Instead, you are attending to all other tokens or patches in the input, meaning that this is a much more powerful mechanism, especially on long-range dependencies, since, no matter where they are, dependencies are taken into accoun the same way. On top of that, self-attention helps clear out some possible semantinc misunderstandigs which can only be resolved with context and neighboring words.\nMulti-head attention is a mechanism in which attention is computed multiple times in parallel (in the case of GPT, for instance, it’s 96). This is done as to capture slightly different contextual aspects of language in each of them.\nPositional encoding, which works by adding a fixed vector to each token embedding before processing, encoding its position in the sequence. Without this the transformer would be completely permutation invariant, even though shuffling the tokens would give the same output, which is clearly wrong.\nIt works the same, but with image patches of 16x16 pixels which are then flattened and computed the same. The equivalent of a token would be an image patch.",
     "crumbs": [
       "Curriculum",
-      "Stage 2: Convolutional Neural Networks"
+      "Stage 3: Attention and Transformers"
     ]
   },
   {
-    "objectID": "curriculum/02-convolutional-neural-networks.html#open-questions",
-    "href": "curriculum/02-convolutional-neural-networks.html#open-questions",
-    "title": "Stage 2: Convolutional Neural Networks",
+    "objectID": "curriculum/03-attention-and-transformers.html#open-questions",
+    "href": "curriculum/03-attention-and-transformers.html#open-questions",
+    "title": "Stage 3: Attention and Transformers",
     "section": "Open questions",
-    "text": "Open questions\n\n“3D volumes of neurons” –&gt; what does this mean? 3D is already volume if we’re talking space coordinates. What dimensions are we talking about exaclty? What space are they living in?; Apparently by 3D they mean a tensor in 3 dimensions. For an input image the three dimensions could for instance be the width and height of an image, and the “depth” or third dimension could be the color channels (3 for RGB). So a 32x32 color image is a 32x32x3 array of numbers.\nHow do you choose the activation filters? Are they randomly initialised?; Yes, but with different values, since otherways they’d all be learning the same thing.",
+    "text": "Open questions\n\nHow is softmax mathematically described? What function is it?; It is a generalisation of the logistic function to multiple dimensions.\nHow are embeddings calculated?; It used to be done with networks such as word2vec, but nowadays everything is computed directly within the transformer architecture. The Transformer uses a random initialization of the weight matrix and refines these weights during training i.e. it learns its own word embeddings.\nDatasets: which ones are there? Which ones are most famous, what are they generally used for?; Some that I’ve heard of so far: LAION400M, MSCOCO, Flickr30k\nWhat is a TPU?; It means Tensor Processing Unit, a computational processing unit.\nWhat is a “latent” space? Why is it called that?; I don’t know why it’s called that way, but it’s the same as embedding space. Latent as in “hidden”?",
     "crumbs": [
       "Curriculum",
-      "Stage 2: Convolutional Neural Networks"
+      "Stage 3: Attention and Transformers"
     ]
   },
   {
-    "objectID": "curriculum/02-convolutional-neural-networks.html#notes",
-    "href": "curriculum/02-convolutional-neural-networks.html#notes",
-    "title": "Stage 2: Convolutional Neural Networks",
+    "objectID": "curriculum/03-attention-and-transformers.html#notes",
+    "href": "curriculum/03-attention-and-transformers.html#notes",
+    "title": "Stage 3: Attention and Transformers",
     "section": "Notes",
-    "text": "Notes\n\nDefinition & Core Elements\nCNNs have the same key components of the neural networks we saw before but, in this case, their loss function can be for instance an SVM or softmax and, most importantly, they assume all inputs are images. In particular, regular neural networks do not scale well to images, which is why we can have this subset of neural networks as a specialised subtype particular to the problematics commonly found in images.\nCNNs have three types of layers: Convolutional Layer, Pooling Layer and Fully-Connected Layer (add ReLU as an elementwise transformation). Stacking these results in the full architecture of a CNN. As the image moves through the network, width and height shrink while depth grows, encoding increasingly abstract features. The four main layer types are:\n\nCONV (Convolutional Layer). The core of the network. A set of small learned filters slides across the spatial dimensions of the input. At each position, it computes a dot product between the filter weights and the local patch of the image. Since weights can be any real number (positive or negative), the output can also be negative or positive. Each filter produces one 2D activation map, and stacking all of them gives the new depth dimension. Early filters learn to detect edges and textures; deeper filters detect increasingly abstract patterns.\nReLU (Rectified Linear Unit). Applied elementwise immediately after convolution. The function is simply \\(f(x) = \\max(0, x)\\): positive values pass through unchanged, negative values are set to zero. A negative activation means the filter did not detect its feature at that location, so ReLU converts it to “nothing detected.” Without this nonlinearity, stacking layers would collapse into a single linear transformation and the network would lose expressive power.\nPOOL (Pooling Layer). Downsamples the spatial dimensions. The most common version is max pooling: a 2x2 window slides across each activation map and keeps only the maximum value in each patch, discarding the rest. This halves the width and height while preserving depth. Other examples are average pooling, for instance. The intuition is coarse-graining: integrating out fine-grained spatial detail to keep only the dominant signal, reducing computation and making the representation more compact.\nFC (Fully-Connected Layer). At the end of the network, once the spatial dimensions have been reduced to a small size, the volume is flattened and passed through one or more fully-connected layers, exactly as in a standard neural network. The final FC layer outputs one score per class, and the class with the highest score is the prediction.\n\nThe full pipeline for a simple CNN is therefore: detect local features (CONV), introduce nonlinearity (ReLU), (repeat as many times as necessary), reduce spatial resolution (POOL), repeat until compact, then classify (FC).\n\n\nArchitecture Case Study\nA particular case of a relevant CNN architecture is ResNet. In general, more layers tends to work better. However, one problem which arises with this is that if you just naively increase the number of layers, you end up having a higher training error. In ResNets, however, the training and testing error have a consistent improvement as you increase the number of layers.\nIn a resnet, there are skip connections. What that means is that, instead of computing a whole layer again, you’re just computing an addition between layer and layer without getting rid of the original layer again and again. Essentially, if you have an identity matrix, you’re just computing a changing \\(\\delta\\) on top of it, instead of computing the whole changing matrix again and again. This makes it easier to compute with and optimise.",
+    "text": "Notes\n\nTransformers for Text\nThe goal of a transformer is to take a piece of text and produce a probability distribution over the next word. To do this, words are first converted into embeddings, which are vector representations of semantic meaning. A key property of transformers is that these embeddings are not fixed, but instead they are updated based on context through the attention mechanism.\nFor instance, the word “mole” has a generic context-free embedding at first. Depending on surrounding words, attention can shift that embedding toward “animal”, “unit of measurement”, or “spy”, encoding richer meaning as context accumulates.\n\nAttention: Query, Key, and Value\nThe attention mechanism works through three parameter matrices: Query, Key, and Value.\nTaking a simple example of [adjective][noun]: the noun produces a query vector asking “which words are relevant to me?”, and each adjective produces a key vector answering “here is what I contain.” The dot product between queries and keys produces an attention pattern: a matrix of relevance scores between every pair of tokens. High dot product means high relevance (the adjective attends strongly to the noun); low dot product means low relevance (a generic word like “the” attends weakly to most things).\nSince these dot products can range from \\(-\\infty\\) to \\(+\\infty\\), they are normalised through a softmax to produce values between 0 and 1.\nThe value vector then determines what information actually gets passed forward. Each word’s embedding is updated by a weighted sum of value vectors, where the weights come from the attention pattern. This produces a context-enriched embedding in place of the original context-free one.\nThe attention pattern matrix scales with the square of the context window, which becomes a significant computational bottleneck in large language models and is an active area of research.\n\n\nMasking\nDuring training, future tokens must not be visible to the model (this would give away the answer). This is handled by masking: setting future positions in the attention pattern to \\(-\\infty\\) before applying softmax, which drives their weight to zero.\n\n\nMulti-Head Attention and Architecture\nIn practice, attention is computed in parallel across many heads simultaneously (96 in GPT-3). Each head can be thought of as tracking a different type of contextual relationship. The value matrix in each head is factorised into two smaller matrices for computational efficiency, reducing parameters from roughly 150 million to around 6 million per head.\nThe overall architecture of a GPT alternates between attention layers and multilayer perceptron (MLP) layers, repeated across many blocks. Attention handles communication between tokens; MLPs process each token independently. Deeper layers encode increasingly abstract and nuanced meaning.\nGPT-3 has 175 billion parameters in total, of which around 57 billion come from attention, the majority of which come from the MLP layers.\n\n\nSelf-Attention vs Cross-Attention\nThe attention described above is self-attention: tokens in the same sequence attend to each other. This is what GPT-style models use. Cross-attention, used in tasks like translation, allows tokens from one sequence (e.g. English) to attend to tokens from another (e.g. French).\n\n\n\nWhy Transformers Replaced RNNs\nBefore transformers, sequential text was handled by recurrent neural networks (RNNs). RNNs processed text token by token in order, which made them inherently sequential and difficult to parallelise. They also struggled with long texts, losing information from early tokens by the time they reached later ones.\nTransformers solve both problems. By processing all tokens simultaneously and using positional encoding to preserve order information, they are highly parallelisable and scale well with both sequence length and model size.\nThe two core innovations of transformers are:\n\nPositional encoding: word order is stored in the data itself rather than enforced by sequential processing.\nSelf-attention: context is captured by allowing every token to directly attend to every other token, regardless of distance.\n\n\n\nVision Transformers (ViT)\nThe core architecture of a Vision Transformer is identical to that of a text transformer. The difference is in how the input is represented.\nAn image is divided into fixed-size patches (typically 16x16 pixels). Each patch is flattened and linearly projected into an embedding vector, taking the role of a token. From that point, the architecture proceeds exactly as in the text case: positional encodings are added, and the sequence of patch embeddings is passed through alternating self-attention and MLP layers.\nWhen ViT model names include descriptors like “Large” or “Huge”, these refer to the number of layers and parameters in the architecture. The number (e.g. ViT-16 or ViT-14) refers to the patch size in pixels.",
     "crumbs": [
       "Curriculum",
-      "Stage 2: Convolutional Neural Networks"
-    ]
-  },
-  {
-    "objectID": "curriculum/00-overview.html",
-    "href": "curriculum/00-overview.html",
-    "title": "Curriculum Overview",
-    "section": "",
-    "text": "A structured path through the technical foundations of vision-language models, designed for someone coming from physics and applied mathematics.",
-    "crumbs": [
-      "Curriculum",
-      "Curriculum Overview"
-    ]
-  },
-  {
-    "objectID": "curriculum/00-overview.html#dependency-structure",
-    "href": "curriculum/00-overview.html#dependency-structure",
-    "title": "Curriculum Overview",
-    "section": "Dependency structure",
-    "text": "Dependency structure\nEach stage builds on the previous. The through-line is this: all of these models are learning to compress high-dimensional data into lower-dimensional representations. What gets preserved and what gets discarded in that compression is the technical core of most interesting questions in this space.",
-    "crumbs": [
-      "Curriculum",
-      "Curriculum Overview"
-    ]
-  },
-  {
-    "objectID": "curriculum/00-overview.html#stages",
-    "href": "curriculum/00-overview.html#stages",
-    "title": "Curriculum Overview",
-    "section": "Stages",
-    "text": "Stages\n\nStage 1 – How neural networks learn\nCore reading: Nielsen, Neural Networks and Deep Learning, chapters 1-2. Free online\nThe foundation. Forward pass, loss functions, gradient descent, backpropagation.\n\n\nStage 2 – Convolutional Neural Networks\nCore reading: CS231n notes on CNNs (Stanford, free online)\nSpatial locality and translation equivariance as inductive biases. Convolution as learned feature detection. Residual connections.\n\n\nStage 3 – Attention and Transformers\nCore reading: Vaswani et al. 2017 (Attention is All You Need) + Jay Alammar’s The Illustrated Transformer\nThe architecture that replaced everything else. Self-attention as a soft, differentiable, input-dependent weighted average. Vision Transformers (ViTs) as the direct precursor to CLIP’s image encoder.\n\n\nStage 4 – CLIP and vision-language models\nCore reading: Radford et al. 2021 (Learning Transferable Visual Models From Natural Language Supervision)\nContrastive learning, shared embedding spaces, zero-shot classification. Why the training data matters enormously.\n\n\nStage 5 – Evaluation and benchmarks\n[Reference readings in parallel to the rest of the syllabus]",
-    "crumbs": [
-      "Curriculum",
-      "Curriculum Overview"
-    ]
-  },
-  {
-    "objectID": "curriculum/00-overview.html#status",
-    "href": "curriculum/00-overview.html#status",
-    "title": "Curriculum Overview",
-    "section": "Status",
-    "text": "Status\n\n\n\nStage\nStatus\n\n\n\n\n1 – Neural networks\nfinished\n\n\n2 – CNNs\nfinished\n\n\n3 – Attention\nin progress\n\n\n4 – CLIP\nnot started\n\n\n5 – Evaluation\nin progress",
-    "crumbs": [
-      "Curriculum",
-      "Curriculum Overview"
+      "Stage 3: Attention and Transformers"
     ]
   },
   {
@@ -212,80 +168,201 @@
     ]
   },
   {
-    "objectID": "curriculum/03-attention-and-transformers.html",
-    "href": "curriculum/03-attention-and-transformers.html",
-    "title": "Stage 3: Attention and Transformers",
+    "objectID": "curriculum/00-overview.html",
+    "href": "curriculum/00-overview.html",
+    "title": "Curriculum Overview",
     "section": "",
-    "text": "3Blue1Brown introduction to attention in tansformers as a first foot in. https://www.youtube.com/watch?v=eMlx5fFNoYc\nInteractive transformer. https://poloclub.github.io/transformer-explainer/\nVaswani et al. 2017, Attention is All You Need. https://arxiv.org/abs/1706.03762\nJay Alammar, The Illustrated Transformer. https://jalammar.github.io/illustrated-transformer\nStart with the Illustrated Transformer, it is much more accessible than the paper. Then read the paper to see the formal treatment.\nEstimated time: 4-5 hours.",
+    "text": "A structured path through the technical foundations of vision-language models, designed for someone coming from physics and applied mathematics.",
     "crumbs": [
       "Curriculum",
-      "Stage 3: Attention and Transformers"
+      "Curriculum Overview"
     ]
   },
   {
-    "objectID": "curriculum/03-attention-and-transformers.html#reading",
-    "href": "curriculum/03-attention-and-transformers.html#reading",
-    "title": "Stage 3: Attention and Transformers",
-    "section": "",
-    "text": "3Blue1Brown introduction to attention in tansformers as a first foot in. https://www.youtube.com/watch?v=eMlx5fFNoYc\nInteractive transformer. https://poloclub.github.io/transformer-explainer/\nVaswani et al. 2017, Attention is All You Need. https://arxiv.org/abs/1706.03762\nJay Alammar, The Illustrated Transformer. https://jalammar.github.io/illustrated-transformer\nStart with the Illustrated Transformer, it is much more accessible than the paper. Then read the paper to see the formal treatment.\nEstimated time: 4-5 hours.",
+    "objectID": "curriculum/00-overview.html#dependency-structure",
+    "href": "curriculum/00-overview.html#dependency-structure",
+    "title": "Curriculum Overview",
+    "section": "Dependency structure",
+    "text": "Dependency structure\nEach stage builds on the previous. The through-line is this: all of these models are learning to compress high-dimensional data into lower-dimensional representations. What gets preserved and what gets discarded in that compression is the technical core of most interesting questions in this space.",
     "crumbs": [
       "Curriculum",
-      "Stage 3: Attention and Transformers"
+      "Curriculum Overview"
     ]
   },
   {
-    "objectID": "curriculum/03-attention-and-transformers.html#key-concepts-to-watch-for",
-    "href": "curriculum/03-attention-and-transformers.html#key-concepts-to-watch-for",
-    "title": "Stage 3: Attention and Transformers",
+    "objectID": "curriculum/00-overview.html#stages",
+    "href": "curriculum/00-overview.html#stages",
+    "title": "Curriculum Overview",
+    "section": "Stages",
+    "text": "Stages\n\nStage 1 – How neural networks learn\nCore reading: Nielsen, Neural Networks and Deep Learning, chapters 1-2. Free online\nThe foundation. Forward pass, loss functions, gradient descent, backpropagation.\n\n\nStage 2 – Convolutional Neural Networks\nCore reading: CS231n notes on CNNs (Stanford, free online)\nSpatial locality and translation equivariance as inductive biases. Convolution as learned feature detection. Residual connections.\n\n\nStage 3 – Attention and Transformers\nCore reading: Vaswani et al. 2017 (Attention is All You Need) + Jay Alammar’s The Illustrated Transformer\nThe architecture that replaced everything else. Self-attention as a soft, differentiable, input-dependent weighted average. Vision Transformers (ViTs) as the direct precursor to CLIP’s image encoder.\n\n\nStage 4 – CLIP and vision-language models\nCore reading: Radford et al. 2021 (Learning Transferable Visual Models From Natural Language Supervision)\nContrastive learning, shared embedding spaces, zero-shot classification. Why the training data matters enormously.\n\n\nStage 5 – Evaluation and benchmarks\n[Reference readings in parallel to the rest of the syllabus]",
+    "crumbs": [
+      "Curriculum",
+      "Curriculum Overview"
+    ]
+  },
+  {
+    "objectID": "curriculum/00-overview.html#status",
+    "href": "curriculum/00-overview.html#status",
+    "title": "Curriculum Overview",
+    "section": "Status",
+    "text": "Status\n\n\n\nStage\nStatus\n\n\n\n\n1 – Neural networks\nfinished\n\n\n2 – CNNs\nfinished\n\n\n3 – Attention\nfinished\n\n\n4 – CLIP\nin progress\n\n\n5 – Evaluation\nin progress",
+    "crumbs": [
+      "Curriculum",
+      "Curriculum Overview"
+    ]
+  },
+  {
+    "objectID": "curriculum/02-convolutional-neural-networks.html",
+    "href": "curriculum/02-convolutional-neural-networks.html",
+    "title": "Stage 2: Convolutional Neural Networks",
+    "section": "",
+    "text": "CS231n, Convolutional Neural Networks for Visual Recognition, module on CNNs. https://cs231n.github.io/convolutional-networks\nEstimated time: 2-3 hours.",
+    "crumbs": [
+      "Curriculum",
+      "Stage 2: Convolutional Neural Networks"
+    ]
+  },
+  {
+    "objectID": "curriculum/02-convolutional-neural-networks.html#reading",
+    "href": "curriculum/02-convolutional-neural-networks.html#reading",
+    "title": "Stage 2: Convolutional Neural Networks",
+    "section": "",
+    "text": "CS231n, Convolutional Neural Networks for Visual Recognition, module on CNNs. https://cs231n.github.io/convolutional-networks\nEstimated time: 2-3 hours.",
+    "crumbs": [
+      "Curriculum",
+      "Stage 2: Convolutional Neural Networks"
+    ]
+  },
+  {
+    "objectID": "curriculum/02-convolutional-neural-networks.html#key-concepts-to-watch-for",
+    "href": "curriculum/02-convolutional-neural-networks.html#key-concepts-to-watch-for",
+    "title": "Stage 2: Convolutional Neural Networks",
     "section": "Key concepts to watch for",
-    "text": "Key concepts to watch for\n\nThe attention mechanism: what it is computing and why it is useful\nQuery, Key, Value: what these three vectors represent and where they come from\nSelf-attention: how tokens attend to each other within a sequence\nMulti-head attention: why you want several attention mechanisms running in parallel\nPositional encoding: why it is needed and how it works\nVision Transformers (ViTs): how the transformer architecture is adapted for images",
+    "text": "Key concepts to watch for\n\nConvolution: what it actually does to an image mathematically\nInductive biases: spatial locality and translation equivariance, and why they matter\nFeature maps: what gets detected at each layer, and how abstraction builds up\nPooling: coarse-graining the representation\nResidual connections: why depth was hard before ResNets, and what skip connections solve",
     "crumbs": [
       "Curriculum",
-      "Stage 3: Attention and Transformers"
+      "Stage 2: Convolutional Neural Networks"
     ]
   },
   {
-    "objectID": "curriculum/03-attention-and-transformers.html#checkpoint",
-    "href": "curriculum/03-attention-and-transformers.html#checkpoint",
-    "title": "Stage 3: Attention and Transformers",
+    "objectID": "curriculum/02-convolutional-neural-networks.html#checkpoint",
+    "href": "curriculum/02-convolutional-neural-networks.html#checkpoint",
+    "title": "Stage 2: Convolutional Neural Networks",
     "section": "Checkpoint",
-    "text": "Checkpoint\nAfter finishing the reading, answer these in your own words:\n\nWhat is the attention mechanism computing? What is the intuition behind Query, Key, and Value?\nWhy is self-attention more powerful than convolution for capturing long-range dependencies?\nWhat is multi-head attention and why is it useful?\nCNNs have translation equivariance built in by design. Transformers do not: how do they compensate for this?\nHow does a Vision Transformer (ViT) adapt the transformer architecture for images? What is the equivalent of a “token” in this setting?\n\n(answers below)",
+    "text": "Checkpoint\nAfter finishing the reading, answer these in your own words:\n\nWhat is a convolution doing to an image? What is the filter learning?\nWhat does “translation equivariance” mean, and why is it a useful assumption for images?\nAs you go deeper in a CNN, what happens to the representation? What is gained and what is lost?\nWhat problem do residual connections solve, and why does that matter for deep networks?\n\n(answers below)",
     "crumbs": [
       "Curriculum",
-      "Stage 3: Attention and Transformers"
+      "Stage 2: Convolutional Neural Networks"
     ]
   },
   {
-    "objectID": "curriculum/03-attention-and-transformers.html#my-answers",
-    "href": "curriculum/03-attention-and-transformers.html#my-answers",
-    "title": "Stage 3: Attention and Transformers",
+    "objectID": "curriculum/02-convolutional-neural-networks.html#my-answers",
+    "href": "curriculum/02-convolutional-neural-networks.html#my-answers",
+    "title": "Stage 2: Convolutional Neural Networks",
+    "section": "My answers",
+    "text": "My answers\n\nA convolutional layer extracts local features from an image by sliding a small filter across the spatial dimensions and computing a dot product at each position. Each filter learns to detect one specific pattern (an edge, a texture, a colour gradient). Stacking multiple convolutional layers produces increasing abstraction: early layers detect simple features, deeper layers detect combinations of those features into increasingly complex patterns.\nTranslation equivariance means that if a feature shifts position in the input image, its corresponding activation in the feature map shifts by the same amount. This is a useful assumption for images because objects can appear anywhere in the frame: a cat in the top left and a cat in the bottom right are still cats, and the filter should detect both without needing to be retrained for each location.\nAs you go deeper in a CNN, the representation gains abstraction and depth: more filters track more distinct and complex features simultaneously. It loses spatial resolution, as width and height shrink through pooling. Fine-grained spatial detail is traded for richer, more abstract feature representations.\nResidual connections solve the vanishing gradient problem. As networks get deeper, the gradient signal shrinks as it travels backward through many layers during backpropagation, causing early layers to stop learning effectively. Skip connections give gradients a direct path backward by adding the input of a layer directly to its output, bypassing the transformation. This allows very deep networks to train effectively without degradation in performance.",
+    "crumbs": [
+      "Curriculum",
+      "Stage 2: Convolutional Neural Networks"
+    ]
+  },
+  {
+    "objectID": "curriculum/02-convolutional-neural-networks.html#open-questions",
+    "href": "curriculum/02-convolutional-neural-networks.html#open-questions",
+    "title": "Stage 2: Convolutional Neural Networks",
+    "section": "Open questions",
+    "text": "Open questions\n\n“3D volumes of neurons” –&gt; what does this mean? 3D is already volume if we’re talking space coordinates. What dimensions are we talking about exaclty? What space are they living in?; Apparently by 3D they mean a tensor in 3 dimensions. For an input image the three dimensions could for instance be the width and height of an image, and the “depth” or third dimension could be the color channels (3 for RGB). So a 32x32 color image is a 32x32x3 array of numbers.\nHow do you choose the activation filters? Are they randomly initialised?; Yes, but with different values, since otherways they’d all be learning the same thing.",
+    "crumbs": [
+      "Curriculum",
+      "Stage 2: Convolutional Neural Networks"
+    ]
+  },
+  {
+    "objectID": "curriculum/02-convolutional-neural-networks.html#notes",
+    "href": "curriculum/02-convolutional-neural-networks.html#notes",
+    "title": "Stage 2: Convolutional Neural Networks",
+    "section": "Notes",
+    "text": "Notes\n\nDefinition & Core Elements\nCNNs have the same key components of the neural networks we saw before but, in this case, their loss function can be for instance an SVM or softmax and, most importantly, they assume all inputs are images. In particular, regular neural networks do not scale well to images, which is why we can have this subset of neural networks as a specialised subtype particular to the problematics commonly found in images.\nCNNs have three types of layers: Convolutional Layer, Pooling Layer and Fully-Connected Layer (add ReLU as an elementwise transformation). Stacking these results in the full architecture of a CNN. As the image moves through the network, width and height shrink while depth grows, encoding increasingly abstract features. The four main layer types are:\n\nCONV (Convolutional Layer). The core of the network. A set of small learned filters slides across the spatial dimensions of the input. At each position, it computes a dot product between the filter weights and the local patch of the image. Since weights can be any real number (positive or negative), the output can also be negative or positive. Each filter produces one 2D activation map, and stacking all of them gives the new depth dimension. Early filters learn to detect edges and textures; deeper filters detect increasingly abstract patterns.\nReLU (Rectified Linear Unit). Applied elementwise immediately after convolution. The function is simply \\(f(x) = \\max(0, x)\\): positive values pass through unchanged, negative values are set to zero. A negative activation means the filter did not detect its feature at that location, so ReLU converts it to “nothing detected.” Without this nonlinearity, stacking layers would collapse into a single linear transformation and the network would lose expressive power.\nPOOL (Pooling Layer). Downsamples the spatial dimensions. The most common version is max pooling: a 2x2 window slides across each activation map and keeps only the maximum value in each patch, discarding the rest. This halves the width and height while preserving depth. Other examples are average pooling, for instance. The intuition is coarse-graining: integrating out fine-grained spatial detail to keep only the dominant signal, reducing computation and making the representation more compact.\nFC (Fully-Connected Layer). At the end of the network, once the spatial dimensions have been reduced to a small size, the volume is flattened and passed through one or more fully-connected layers, exactly as in a standard neural network. The final FC layer outputs one score per class, and the class with the highest score is the prediction.\n\nThe full pipeline for a simple CNN is therefore: detect local features (CONV), introduce nonlinearity (ReLU), (repeat as many times as necessary), reduce spatial resolution (POOL), repeat until compact, then classify (FC).\n\n\nArchitecture Case Study\nA particular case of a relevant CNN architecture is ResNet. In general, more layers tends to work better. However, one problem which arises with this is that if you just naively increase the number of layers, you end up having a higher training error. In ResNets, however, the training and testing error have a consistent improvement as you increase the number of layers.\nIn a resnet, there are skip connections. What that means is that, instead of computing a whole layer again, you’re just computing an addition between layer and layer without getting rid of the original layer again and again. Essentially, if you have an identity matrix, you’re just computing a changing \\(\\delta\\) on top of it, instead of computing the whole changing matrix again and again. This makes it easier to compute with and optimise.",
+    "crumbs": [
+      "Curriculum",
+      "Stage 2: Convolutional Neural Networks"
+    ]
+  },
+  {
+    "objectID": "curriculum/04-clip-and-vlms.html",
+    "href": "curriculum/04-clip-and-vlms.html",
+    "title": "Stage 4: CLIP and Vision-Language Models",
+    "section": "",
+    "text": "Radford et al. 2021, Learning Transferable Visual Models From Natural Language Supervision. https://arxiv.org/abs/2103.00020\nAs a gentler entry point before the paper, watch: “CLIP explained” by Yannic Kilcher – search on YouTube, roughly 30 minutes.\nEstimated time: 4-5 hours.",
+    "crumbs": [
+      "Curriculum",
+      "Stage 4: CLIP and Vision-Language Models"
+    ]
+  },
+  {
+    "objectID": "curriculum/04-clip-and-vlms.html#reading",
+    "href": "curriculum/04-clip-and-vlms.html#reading",
+    "title": "Stage 4: CLIP and Vision-Language Models",
+    "section": "",
+    "text": "Radford et al. 2021, Learning Transferable Visual Models From Natural Language Supervision. https://arxiv.org/abs/2103.00020\nAs a gentler entry point before the paper, watch: “CLIP explained” by Yannic Kilcher – search on YouTube, roughly 30 minutes.\nEstimated time: 4-5 hours.",
+    "crumbs": [
+      "Curriculum",
+      "Stage 4: CLIP and Vision-Language Models"
+    ]
+  },
+  {
+    "objectID": "curriculum/04-clip-and-vlms.html#key-concepts-to-watch-for",
+    "href": "curriculum/04-clip-and-vlms.html#key-concepts-to-watch-for",
+    "title": "Stage 4: CLIP and Vision-Language Models",
+    "section": "Key concepts to watch for",
+    "text": "Key concepts to watch for\n\nContrastive learning: what the training objective is and why it works\nShared embedding space: what it means for images and text to live in the same space\nInfoNCE loss: the specific contrastive loss CLIP uses and its information-theoretic interpretation\nZero-shot classification: how CLIP classifies images it has never explicitly been trained on\nTraining data: what LAION and web-scraped image-text pairs look like, and why this matters\nCosine similarity: how “closeness” is measured in the embedding space",
+    "crumbs": [
+      "Curriculum",
+      "Stage 4: CLIP and Vision-Language Models"
+    ]
+  },
+  {
+    "objectID": "curriculum/04-clip-and-vlms.html#checkpoint",
+    "href": "curriculum/04-clip-and-vlms.html#checkpoint",
+    "title": "Stage 4: CLIP and Vision-Language Models",
+    "section": "Checkpoint",
+    "text": "Checkpoint\nAfter finishing the reading, answer these in your own words:\n\nWhat is contrastive learning? What is the model being trained to do, and what does the loss function reward and penalise?\nWhat does it mean for images and text to share an embedding space? What is geometrically happening when a photo of a dog and the caption “a photo of a dog” end up close together?\nHow does zero-shot classification work in CLIP? Walk through the mechanism step by step.\nCLIP is trained on web-scraped image-text pairs. What are the implications of this for what the embedding space learns?\nWhy is cosine similarity used to measure closeness rather than Euclidean distance?\n\n(answers below)",
+    "crumbs": [
+      "Curriculum",
+      "Stage 4: CLIP and Vision-Language Models"
+    ]
+  },
+  {
+    "objectID": "curriculum/04-clip-and-vlms.html#my-answers",
+    "href": "curriculum/04-clip-and-vlms.html#my-answers",
+    "title": "Stage 4: CLIP and Vision-Language Models",
     "section": "My answers",
     "text": "My answers\n(to be filled after reading)",
     "crumbs": [
       "Curriculum",
-      "Stage 3: Attention and Transformers"
+      "Stage 4: CLIP and Vision-Language Models"
     ]
   },
   {
-    "objectID": "curriculum/03-attention-and-transformers.html#open-questions",
-    "href": "curriculum/03-attention-and-transformers.html#open-questions",
-    "title": "Stage 3: Attention and Transformers",
+    "objectID": "curriculum/04-clip-and-vlms.html#open-questions",
+    "href": "curriculum/04-clip-and-vlms.html#open-questions",
+    "title": "Stage 4: CLIP and Vision-Language Models",
     "section": "Open questions",
-    "text": "Open questions\n\nHow is softmax mathematically described? What function is it?; It is a generalisation of the logistic function to multiple dimensions.\nHow are embeddings calculated?;\nDatasets: which ones are there? Which ones are most famous, what are they generally used for?;\nWhat is a TPU?;",
+    "text": "Open questions",
     "crumbs": [
       "Curriculum",
-      "Stage 3: Attention and Transformers"
+      "Stage 4: CLIP and Vision-Language Models"
     ]
   },
   {
-    "objectID": "curriculum/03-attention-and-transformers.html#notes",
-    "href": "curriculum/03-attention-and-transformers.html#notes",
-    "title": "Stage 3: Attention and Transformers",
+    "objectID": "curriculum/04-clip-and-vlms.html#notes",
+    "href": "curriculum/04-clip-and-vlms.html#notes",
+    "title": "Stage 4: CLIP and Vision-Language Models",
     "section": "Notes",
-    "text": "Notes\n\nTransformers for Text\nThe goal of a transformer is to take a piece of text and produce a probability distribution over the next word. To do this, words are first converted into embeddings, which are vector representations of semantic meaning. A key property of transformers is that these embeddings are not fixed, but instead they are updated based on context through the attention mechanism.\nFor instance, the word “mole” has a generic context-free embedding at first. Depending on surrounding words, attention can shift that embedding toward “animal”, “unit of measurement”, or “spy”, encoding richer meaning as context accumulates.\n\nAttention: Query, Key, and Value\nThe attention mechanism works through three parameter matrices: Query, Key, and Value.\nTaking a simple example of [adjective][noun]: the noun produces a query vector asking “which words are relevant to me?”, and each adjective produces a key vector answering “here is what I contain.” The dot product between queries and keys produces an attention pattern: a matrix of relevance scores between every pair of tokens. High dot product means high relevance (the adjective attends strongly to the noun); low dot product means low relevance (a generic word like “the” attends weakly to most things).\nSince these dot products can range from \\(-\\infty\\) to \\(+\\infty\\), they are normalised through a softmax to produce values between 0 and 1.\nThe value vector then determines what information actually gets passed forward. Each word’s embedding is updated by a weighted sum of value vectors, where the weights come from the attention pattern. This produces a context-enriched embedding in place of the original context-free one.\nThe attention pattern matrix scales with the square of the context window, which becomes a significant computational bottleneck in large language models and is an active area of research.\n\n\nMasking\nDuring training, future tokens must not be visible to the model (this would give away the answer). This is handled by masking: setting future positions in the attention pattern to \\(-\\infty\\) before applying softmax, which drives their weight to zero.\n\n\nMulti-Head Attention and Architecture\nIn practice, attention is computed in parallel across many heads simultaneously (96 in GPT-3). Each head can be thought of as tracking a different type of contextual relationship. The value matrix in each head is factorised into two smaller matrices for computational efficiency, reducing parameters from roughly 150 million to around 6 million per head.\nThe overall architecture of a GPT alternates between attention layers and multilayer perceptron (MLP) layers, repeated across many blocks. Attention handles communication between tokens; MLPs process each token independently. Deeper layers encode increasingly abstract and nuanced meaning.\nGPT-3 has 175 billion parameters in total, of which around 57 billion come from attention, the majority of which come from the MLP layers.\n\n\nSelf-Attention vs Cross-Attention\nThe attention described above is self-attention: tokens in the same sequence attend to each other. This is what GPT-style models use. Cross-attention, used in tasks like translation, allows tokens from one sequence (e.g. English) to attend to tokens from another (e.g. French).\n\n\n\nWhy Transformers Replaced RNNs\nBefore transformers, sequential text was handled by recurrent neural networks (RNNs). RNNs processed text token by token in order, which made them inherently sequential and difficult to parallelise. They also struggled with long texts, losing information from early tokens by the time they reached later ones.\nTransformers solve both problems. By processing all tokens simultaneously and using positional encoding to preserve order information, they are highly parallelisable and scale well with both sequence length and model size.\nThe two core innovations of transformers are:\n\nPositional encoding: word order is stored in the data itself rather than enforced by sequential processing.\nSelf-attention: context is captured by allowing every token to directly attend to every other token, regardless of distance.\n\n\n\nVision Transformers (ViT)\nThe core architecture of a Vision Transformer is identical to that of a text transformer. The difference is in how the input is represented.\nAn image is divided into fixed-size patches (typically 16x16 pixels). Each patch is flattened and linearly projected into an embedding vector, taking the role of a token. From that point, the architecture proceeds exactly as in the text case: positional encodings are added, and the sequence of patch embeddings is passed through alternating self-attention and MLP layers.\nWhen ViT model names include descriptors like “Large” or “Huge”, these refer to the number of layers and parameters in the architecture. The number (e.g. ViT-16 or ViT-14) refers to the patch size in pixels.",
+    "text": "Notes",
     "crumbs": [
       "Curriculum",
-      "Stage 3: Attention and Transformers"
+      "Stage 4: CLIP and Vision-Language Models"
     ]
   }
 ]
